@@ -20,6 +20,8 @@ if q > d - 1
     q = d - 1;
 end
 
+S = Ynew * Ynew' / instanceCount;
+
 % initialization
 W = eye(d, q);
 Wprev = zeros(d, q);
@@ -28,19 +30,27 @@ varPrev = 0;
 
 epsilon = 0.000001;
 iteration = 1;
+
 % EM with E and M steps combined
+
 while sum(sum(abs(W-Wprev))) > epsilon || abs(var - varPrev) > epsilon 
     % calculating SW faster
-    iteration = iteration + 1;
-    SW = (Ynew * (Ynew' * W)) / instanceCount;
-    traceS = sum(sum(Ynew .* Ynew));
+    iteration = iteration + 1
+    SW = (Ynew * (Ynew' * W)) / (instanceCount*1.0);
+    traceS = sum(sum(Ynew .* Ynew)) / (instanceCount*1.0);
     Wprev = W;
     M = W' * W + var * eye(q);
     
-    W = SW*inv(var * eye(q) + (M \ W')*SW);
-    T = SW * (M \ W');
-    var = (traceS - trace(T)) / d;
+    W = SW*inv(var * eye(q) + inv(M)*W'*SW);
+    T = SW * inv(M) * W';
     varPrev = var;
+    var = (traceS - trace(T)) / d;
+
+%     Wprev = W;
+%     W = S*W*inv(var*eye(q)+inv(W'*W+var*eye(q))*W'*S*W);
+%     varPrev = var;
+%     var = trace(S-S*Wprev*inv(Wprev' * Wprev+var*eye(q))*W')/d;
+
 end
 
 M = W' * W + var * eye(q);
