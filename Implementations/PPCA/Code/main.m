@@ -20,4 +20,10 @@ text(X(1, :) + 0.1, X(2, :) + 0.1, T);
 title('PPCA on tobamovirus without using EM algorithm');
 
 %% PPCA with EM 
+[W, var, X] = PPCAWithEM(Y, 2);
+figure;
+scatter(X(1, :), X(2, :));
+T = cellstr(num2str([1:size(X, 2)]'));
+text(X(1, :) + 0.1, X(2, :) + 0.1, T);
+title('PPCA on tobamovirus with using EM algorithm');
 

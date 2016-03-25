@@ -35,7 +35,7 @@ iteration = 1;
 
 while sum(sum(abs(W-Wprev))) > epsilon || abs(var - varPrev) > epsilon 
     % calculating SW faster
-    iteration = iteration + 1
+    iteration = iteration + 1;
     SW = (Ynew * (Ynew' * W)) / (instanceCount*1.0);
     traceS = sum(sum(Ynew .* Ynew)) / (instanceCount*1.0);
     Wprev = W;
