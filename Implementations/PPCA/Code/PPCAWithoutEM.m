@@ -1,4 +1,4 @@
-function [ W, X ] = PPCAWithoutEM( Y, q )
+function [ W, var, X ] = PPCAWithoutEM( Y, q )
 % This function finds the Pincipal compoenents using the concepts of
 % probabilistic PCA , but without the EM algorithms
 % Y -> data

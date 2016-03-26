@@ -46,6 +46,7 @@ while sum(sum(abs(W-Wprev))) > epsilon || abs(var - varPrev) > epsilon
     varPrev = var;
     var = (traceS - trace(T)) / d;
 
+%     % Not optimized
 %     Wprev = W;
 %     W = S*W*inv(var*eye(q)+inv(W'*W+var*eye(q))*W'*S*W);
 %     varPrev = var;
