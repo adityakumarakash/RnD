@@ -15,11 +15,13 @@ Wnew = [W Wnew(:, M==1)];
 
 
 % QR factorization to solve Wnew * x = b
-[Q, R] = qr(Wnew, 'econ');
-y = Q' * b;
-xNew = R\y;
+% [Q, R] = qr(Wnew, 'econ');
+% y = Q' * b;
+% xNew = R\y;
  
 % xNew = linsolve(Wnew, b);
+%xNew = Wnew\b;
+xNew = inv(Wnew'*Wnew) * Wnew' * b;
 
 % separating x and t parts
 x = xNew(1:q);

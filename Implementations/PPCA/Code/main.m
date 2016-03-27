@@ -35,6 +35,6 @@ figure;
 scatter(X(1, :), X(2, :));
 T = cellstr(num2str([1:size(X, 2)]'));
 text(X(1, :) + 0.1, X(2, :) + 0.1, T);
-title('PPCA on tobamovirus with using EM algorithm');
+title('PPCA on tobamovirus missing data with using EM algorithm');
 
 

@@ -1,23 +1,24 @@
-function [ W, var, X ] = PPCAMissingDataWithEM( Y, q, M )
+function [ W, var, X ] = PPCAMissingDataWithEM( Y, q, Miss )
 % This function finds the principal components when some data is missing
 %   M is the missing data indicator
 
 
 d = size(Y, 1);
 instanceCount = size(Y, 2);
-missingInd = (sum(M) ~= 0);
+missingInd = (sum(Miss) ~= 0);
 
 % mean estimation
-YMean = sum(Y .* M, 2) ./ sum(M, 2);
+YMean = sum(Y.*(1-Miss), 2) ./ sum((1-Miss), 2);
+size(YMean)
 YMeanMat = repmat(YMean, 1, instanceCount);
-YNew = Y .* (1 - M) - YMeanMat;
+YNew = Y .* (1 - Miss) - YMeanMat;
 
 % initialization of parameters
 W = eye(d, q);
 WPrev = zeros(d, q);
 varPrev = 0;
 var = 1;
-epsilon = 0.00001;
+epsilon = 0.0001;
 iteration = 1;
 XEst = zeros(q, instanceCount); % This would be updated in each iteration
 
@@ -27,7 +28,7 @@ while sum(sum(abs(W - WPrev))) > epsilon || abs(var - varPrev) > epsilon
     YEst = YNew;
     for i = 1 : instanceCount
         if missingInd(i) == 1
-            [x, tEst] = qrSolution(W, Y(:, i), YMean, M(:, i));
+            [x, tEst] = qrSolution(W, Y(:, i), YMean, Miss(:, i));
             XEst(:, i) = x;
             YEst(:, i) = tEst - YMean;
         end
@@ -47,7 +48,7 @@ end
 
 
 M = W' * W + var * eye(q);
-X = M \ (W' * Ynew);
+X = M \ (W' * YNew);
 
 X(:, missingInd) = XEst(:, missingInd);
 
