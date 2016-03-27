@@ -27,3 +27,14 @@ T = cellstr(num2str([1:size(X, 2)]'));
 text(X(1, :) + 0.1, X(2, :) + 0.1, T);
 title('PPCA on tobamovirus with using EM algorithm');
 
+
+%% PPCA with missing data and EM
+M = rand(size(Y)) > 0.8;
+[W, var, X] = PPCAMissingDataWithEM(Y, 2, M); 
+figure;
+scatter(X(1, :), X(2, :));
+T = cellstr(num2str([1:size(X, 2)]'));
+text(X(1, :) + 0.1, X(2, :) + 0.1, T);
+title('PPCA on tobamovirus with using EM algorithm');
+
+
