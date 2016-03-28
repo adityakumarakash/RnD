@@ -20,9 +20,17 @@ Wnew = [W Wnew(:, M==1)];
 % xNew = R\y;
  
 % xNew = linsolve(Wnew, b);
-%xNew = Wnew\b;
-xNew = inv(Wnew'*Wnew) * Wnew' * b;
-
+% xNew = Wnew\b;
+% xNew = inv(Wnew' * Wnew) * Wnew' * b;
+% A = Wnew' * Wnew
+% y = Wnew' * b
+% size(A);
+% size(y);
+% [Q, R] = qr(A);
+% z = Q' * y;
+% xNew = R \ z;
+xNew = pinv(Wnew) * b;
+ 
 % separating x and t parts
 x = xNew(1:q);
 

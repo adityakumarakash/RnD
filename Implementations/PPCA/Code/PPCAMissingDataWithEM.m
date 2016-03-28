@@ -9,48 +9,48 @@ missingInd = (sum(Miss) ~= 0);
 
 % mean estimation
 YMean = sum(Y.*(1-Miss), 2) ./ sum((1-Miss), 2);
-size(YMean)
 YMeanMat = repmat(YMean, 1, instanceCount);
 YNew = Y .* (1 - Miss) - YMeanMat;
 
 % initialization of parameters
+%[W,~] = PCA(Y(:, sum(Miss) == 0), 2);
 W = eye(d, q);
 WPrev = zeros(d, q);
-varPrev = 0;
-var = 1;
-epsilon = 0.0001;
+varPrev = 0.0;
+var = 1.0;
+epsilon = 0.001;
 iteration = 1;
-XEst = zeros(q, instanceCount); % This would be updated in each iteration
+X = zeros(q, instanceCount); % This would be updated in each iteration
 
 % EM loop
-while sum(sum(abs(W - WPrev))) > epsilon || abs(var - varPrev) > epsilon
+while sum(sum(abs(W-WPrev))) > epsilon || abs(var-varPrev) > epsilon
     iteration = iteration + 1;
     YEst = YNew;
+    % E step
+    invM = inv(W' * W + var * eye(q));
     for i = 1 : instanceCount
         if missingInd(i) == 1
-            [x, tEst] = qrSolution(W, Y(:, i), YMean, Miss(:, i));
-            XEst(:, i) = x;
-            YEst(:, i) = tEst - YMean;
+            [x, t] = qrSolution(W, Y(:, i), YMean, Miss(:, i));
+            X(:, i) = x;
+            YEst(:, i) = t - YMean;
+        else
+            X(:, i) = invM * W' * YNew(:, i);
         end
     end
     
-    SW = (YEst * (YEst' * W)) / (instanceCount*1.0);
-    traceS = sum(sum(YEst .* YEst)) / (instanceCount*1.0);
-    WPrev = W;
-    M = W' * W + var * eye(q);
+    % M Step
     
-    W = SW*inv(var * eye(q) + inv(M)*W'*SW);
-    T = SW * inv(M) * W';
-    varPrev = var;
-    var = (traceS - trace(T)) / d;
-
+    WPrev = W;
+    W = (YEst * X') * inv(var * instanceCount * invM + X * X');
+    varPrev = var;    
+    var = (sum(sum(YEst .* YEst)) - 2 * trace(X' * W' * YEst) + trace(instanceCount * var * invM * W' * W + X * X' * W' * W)) / (instanceCount * d);
+    YNew = YEst;
+    
 end
-
+fprintf('no of iterations = %d\n', iteration);
 
 M = W' * W + var * eye(q);
 X = M \ (W' * YNew);
-
-X(:, missingInd) = XEst(:, missingInd);
 
 end
 

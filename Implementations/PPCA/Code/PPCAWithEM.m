@@ -28,7 +28,7 @@ Wprev = zeros(d, q);
 var = 1;
 varPrev = 0;
 
-epsilon = 0.000001;
+epsilon = 0.0001;
 iteration = 1;
 
 % EM with E and M steps combined
@@ -53,6 +53,8 @@ while sum(sum(abs(W-Wprev))) > epsilon || abs(var - varPrev) > epsilon
 %     var = trace(S-S*Wprev*inv(Wprev' * Wprev+var*eye(q))*W')/d;
 
 end
+
+fprintf('no of iterations = %d\n', iteration);
 
 M = W' * W + var * eye(q);
 X = M \ (W' * Ynew);

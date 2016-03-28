@@ -30,6 +30,17 @@ title('PPCA on tobamovirus with using EM algorithm');
 
 %% PPCA with missing data and EM
 M = rand(size(Y)) > 0.8;
+fprintf('Missing values count = %d\n', sum(sum(M)));
+disp(sum(M));
+fprintf('Data points with no missing elements - ');
+MInstance = sum(M);
+
+for i = 1 : size(Y, 2)
+    if MInstance(i) == 0
+        fprintf('%d ', i);
+    end
+end
+
 [W, var, X] = PPCAMissingDataWithEM(Y, 2, M); 
 figure;
 scatter(X(1, :), X(2, :));
