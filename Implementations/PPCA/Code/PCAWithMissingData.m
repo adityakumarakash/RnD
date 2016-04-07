@@ -8,7 +8,7 @@ missingInd = (sum(Miss) ~= 0);
 
 % initialize the missing value, mean, W
 YMean = sum(Y.*(1-Miss), 2) ./ sum((1-Miss), 2);
-Ytemp = repmat(YMean, 1, instanceCount) .* Miss;
+Ytemp = repmat(YMean, 1, instanceCount);
 %Ytemp = zeros(size(Y));
 %Ytemp = randi(max(max(Y)), size(Y, 1), size(Y, 2));
 Y(Miss == 1) = Ytemp(Miss == 1);
@@ -33,7 +33,7 @@ while sum(sum(abs(W - WPrev))) > epsilon || sum(abs(YMean - YMeanPrev)) > epsilo
     for i = 1 : instanceCount
         if missingInd(i) == 1
             [~, t] = qrSolution(W, Y(:, i), YMean, Miss(:, i));
-            YEst(:, i) = t - YMean;
+            YEst(:, i) = t;
         end
     end
     Y = YEst;
