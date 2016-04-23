@@ -41,7 +41,7 @@ for i = 1 : size(Y, 2)
     end
 end
 
-[W, var, X] = PPCAMissingDataWithEM(Y, 2, M); 
+[W, var, X] = PPCAMissingDataWithEMFast(Y, 2, M); 
 figure;
 scatter(X(1, :), X(2, :));
 T = cellstr(num2str([1:size(X, 2)]'));

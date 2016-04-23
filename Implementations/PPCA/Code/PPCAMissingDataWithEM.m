@@ -14,20 +14,24 @@ YNew = Y .* (1 - Miss) - YMeanMat;
 
 % initialization of parameters
 %[W,~] = PCA(Y(:, sum(Miss) == 0), 2);
-W = eye(d, q);
+W = rand(d, q);
+norm = sum(W);
+W = W ./ norm(ones(d, 1), :);
+
 WPrev = zeros(d, q);
 varPrev = 0.0;
 var = 1.0;
-epsilon = 0.001;
+epsilon = 0.01;
 iteration = 1;
 X = zeros(q, instanceCount); % This would be updated in each iteration
 
 % EM loop
-while sum(sum(abs(W-WPrev))) > epsilon || abs(var-varPrev) > epsilon
+while sum(sum(abs(W-WPrev)))/sum(sum(abs(WPrev))) > epsilon || abs(var-varPrev) > epsilon
     iteration = iteration + 1;
     YEst = YNew;
     % E step
     invM = inv(W' * W + var * eye(q));
+    tic
     for i = 1 : instanceCount
         if missingInd(i) == 1
             [x, t] = qrSolution(W, Y(:, i), YMean, Miss(:, i));
@@ -36,8 +40,12 @@ while sum(sum(abs(W-WPrev))) > epsilon || abs(var-varPrev) > epsilon
         else
             X(:, i) = invM * W' * YNew(:, i);
         end
+        if mod(i, 100) == 0
+            toc
+            tic
+        end
     end
-    
+
     % M Step
     
     WPrev = W;
@@ -47,7 +55,7 @@ while sum(sum(abs(W-WPrev))) > epsilon || abs(var-varPrev) > epsilon
     YNew = YEst;
     
 end
-fprintf('no of iterations = %d\n', iteration);
+fprintf('No of iterations = %d\n', iteration);
 
 M = W' * W + var * eye(q);
 X = M \ (W' * YNew);
