@@ -25,16 +25,17 @@ iteration = 0;
 X = zeros(q, instanceCount); % This would be updated in each iteration
 WRef = -1 * eye(d);
 
+tic
 % EM loop
 while sum(sum(abs(W-WPrev)))/sum(sum(abs(WPrev))) > epsilon || abs(var-varPrev) > epsilon
     iteration = iteration + 1;
     YEst = YNew;
-    if iteration > 1
-        break
-    end
+%     if iteration > 1
+%         break
+%     end
     % E step
     invM = inv(W' * W + var * eye(q));
-    tic    
+   
 %     parfor i = 1 : instanceCount
 %         if missingInd(i) == 1
 %             WRef = -1 * eye(d);
@@ -61,7 +62,6 @@ while sum(sum(abs(W-WPrev)))/sum(sum(abs(WPrev))) > epsilon || abs(var-varPrev) 
     end
     YEst = YEst - YMean(:, ones(1, instanceCount));
     X(:, missingInd == 0) = invM * W' * YNew(:, missingInd == 0);
-    toc
    
     % M Step
     WPrev = W;
@@ -71,7 +71,7 @@ while sum(sum(abs(W-WPrev)))/sum(sum(abs(WPrev))) > epsilon || abs(var-varPrev) 
     YNew = YEst;
     
 end
-
+toc
 fprintf('No of iterations = %d\n', iteration);
 M = W' * W + var * eye(q);
 X = M \ (W' * YNew);

@@ -73,11 +73,13 @@ d = size(imagesTrain, 1);       % observed space dimension
 % 
 
 %% Missing Data Case using EM
-MissIndex = rand(size(imagesTrain)) > 0.99;
+missPercent = 0.01;
+fprintf(fId, 'Miss Percentage = %f\n', missPercent*100);
+MissIndex = rand(size(imagesTrain)) > 1 - missPercent;
 fprintf(fId, 'Missing values count = %d\n', sum(sum(MissIndex)));
 
 Dist = zeros(size(imagesTest, 2), 10);
-for digit = 0 : 0
+for digit = 0 : 9
     Y = imagesTrain(:, labelsTrain == digit);
     Miss = MissIndex(:, labelsTrain == digit);
     [W, var, X] = PPCAMissingDataWithEMFast(Y, q, Miss);
@@ -95,7 +97,7 @@ fprintf(fId, 'Accurracy with PPCA Missing data with EM, with q = %d, is %f\n', q
 %% Missing Data without EM case
 % M is the missing data index
 Dist = zeros(size(imagesTest, 2), 10);
-for digit = 0 : 0
+for digit = 0 : 9
     Y = imagesTrain(:, labelsTrain == digit);
     Miss = MissIndex(:, labelsTrain == digit);
     [W, X] = PCAWithMissingDataFast(Y, q, Miss);
