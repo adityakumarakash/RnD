@@ -19,13 +19,13 @@ YMean = mean(Y, 2);
 % previous variables
 YMeanPrev = zeros(size(YMean));
 WPrev = zeros(size(W));
-epsilon = 0.0001;
+epsilon = 0.01;
 iteration = 0;
 WRef = -1 * eye(d);
 
 % Alternate maximization
 tic
-while sum(sum(abs(W - WPrev))) > epsilon || sum(abs(YMean - YMeanPrev)) > epsilon
+while sum(sum(abs(W - WPrev)))/sum(sum(abs(WPrev))) > epsilon || sum(abs(YMean - YMeanPrev))/sum(sum(abs(YMeanPrev))) > epsilon
     WPrev = W;
     YMeanPrev = YMean;
     iteration = iteration + 1;

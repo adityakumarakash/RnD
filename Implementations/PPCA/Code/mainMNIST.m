@@ -9,7 +9,7 @@ labelsTrain = loadMNISTLabels('../../Data/mnist/train-labels.idx1-ubyte');
 labelsTrain = labelsTrain';
 imagesTest = loadMNISTImages('../../Data/mnist/t10k-images.idx3-ubyte');
 labelsTest = loadMNISTLabels('../../Data/mnist/t10k-labels.idx1-ubyte');
-
+fId = fopen('../Outputs/results.txt', 'a');
 
 %% Initializations
 q = 133;      % latent space dimension, 133 works best for PCA standard
@@ -73,23 +73,23 @@ d = size(imagesTrain, 1);       % observed space dimension
 % 
 
 %% Missing Data Case using EM
-M = rand(size(imagesTrain)) > 0.95;
-fprintf('Missing values count = %d\n', sum(sum(M)));
+MissIndex = rand(size(imagesTrain)) > 0.99;
+fprintf(fId, 'Missing values count = %d\n', sum(sum(MissIndex)));
 
-% Dist = zeros(size(imagesTest, 2), 10);
-% for digit = 0 : 0
-%     Y = imagesTrain(:, labelsTrain == digit);
-%     Miss = M(:, labelsTrain == digit);
-%     [W, var, X] = PPCAMissingDataWithEMFast(Y, q, Miss);
-%     M = W' * W + var * eye(q);
-%     mew = mean(Y, 2);
-%     XTest = M\(W' * (imagesTest - mew(:, ones(1, size(imagesTest, 2)))));
-%     Dist(:, digit + 1) = mahal(XTest', X');
-% end
-% 
-% [~, predictedLabels] = min(Dist, [], 2);
-% predictedLabels = predictedLabels - 1;
-% fprintf('Accurracy with PPCA Missing data with EM, with q = %d, is %f\n', q, (sum(predictedLabels == labelsTest))*100/size(labelsTest, 1));
+Dist = zeros(size(imagesTest, 2), 10);
+for digit = 0 : 0
+    Y = imagesTrain(:, labelsTrain == digit);
+    Miss = MissIndex(:, labelsTrain == digit);
+    [W, var, X] = PPCAMissingDataWithEMFast(Y, q, Miss);
+    M = W' * W + var * eye(q);
+    mew = mean(Y, 2);
+    XTest = M\(W' * (imagesTest - mew(:, ones(1, size(imagesTest, 2)))));
+    Dist(:, digit + 1) = mahal(XTest', X');
+end
+
+[~, predictedLabels] = min(Dist, [], 2);
+predictedLabels = predictedLabels - 1;
+fprintf(fId, 'Accurracy with PPCA Missing data with EM, with q = %d, is %f\n', q, (sum(predictedLabels == labelsTest))*100/size(labelsTest, 1));
 
 
 %% Missing Data without EM case
@@ -97,7 +97,7 @@ fprintf('Missing values count = %d\n', sum(sum(M)));
 Dist = zeros(size(imagesTest, 2), 10);
 for digit = 0 : 0
     Y = imagesTrain(:, labelsTrain == digit);
-    Miss = M(:, labelsTrain == digit);
+    Miss = MissIndex(:, labelsTrain == digit);
     [W, X] = PCAWithMissingDataFast(Y, q, Miss);
     mew = mean(Y, 2);
     XTest = W\(imagesTest - mew(:, ones(1, size(imagesTest, 2))));
@@ -106,4 +106,4 @@ end
 
 [~, predictedLabels] = min(Dist, [], 2);
 predictedLabels = predictedLabels - 1;
-fprintf('Accurracy with PCA Missing data without EM, with q = %d, is %f\n', q, (sum(predictedLabels == labelsTest))*100/size(labelsTest, 1));
+fprintf(fId, 'Accurracy with PCA Missing data without EM, with q = %d, is %f\n', q, (sum(predictedLabels == labelsTest))*100/size(labelsTest, 1));
