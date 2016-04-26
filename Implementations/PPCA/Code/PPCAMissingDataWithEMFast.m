@@ -30,9 +30,9 @@ tic
 while sum(sum(abs(W-WPrev)))/sum(sum(abs(WPrev))) > epsilon || abs(var-varPrev) > epsilon
     iteration = iteration + 1;
     YEst = YNew;
-%     if iteration > 1
-%         break
-%     end
+    if iteration > 20
+        break
+    end
     % E step
     invM = inv(W' * W + var * eye(q));
    

@@ -146,3 +146,105 @@ Iteration count = 8
 ----------------------------------------------------------
 
 
+Miss Percentage = 20.000000
+Missing values count = 9406758
+Accurracy with PPCA Missing data with EM, with q = 133, is 92.740000
+Accurracy with PCA Missing data without EM, with q = 133, is 93.080000
+
+>> mainMNIST
+Elapsed time is 699.611309 seconds.
+No of iterations = 17
+Elapsed time is 890.251560 seconds.
+No of iterations = 19
+Elapsed time is 708.350697 seconds.
+No of iterations = 17
+Elapsed time is 736.010947 seconds.
+No of iterations = 17
+Elapsed time is 738.017942 seconds.
+No of iterations = 18
+Elapsed time is 640.052609 seconds.
+No of iterations = 17
+Elapsed time is 741.442631 seconds.
+No of iterations = 18
+Elapsed time is 827.024030 seconds.
+No of iterations = 19
+Elapsed time is 657.857508 seconds.
+No of iterations = 16
+Elapsed time is 784.610330 seconds.
+No of iterations = 19
+
+Elapsed time is 1460.550912 seconds.
+Iteration count = 37
+Elapsed time is 2156.152872 seconds.
+Iteration count = 51
+Elapsed time is 840.721371 seconds.
+Iteration count = 21
+Elapsed time is 761.956321 seconds.
+Iteration count = 19
+Elapsed time is 1401.418933 seconds.
+Iteration count = 36
+Elapsed time is 798.325872 seconds.
+Iteration count = 22
+Elapsed time is 1941.042593 seconds.
+Iteration count = 51
+Elapsed time is 2092.960105 seconds.
+Iteration count = 51
+Elapsed time is 1942.864428 seconds.
+Iteration count = 51
+Elapsed time is 1928.467344 seconds.
+Iteration count = 51
+
+
+------------------------------------------------------
+
+Miss Percentage = 20.000000
+Missing values count = 9403397
+Accurracy with PPCA Missing data with EM, with q = 133, is 92.650000
+Accurracy with PCA Missing data without EM, with q = 133, is 93.160000
+
+>> mainMNIST
+Elapsed time is 723.555740 seconds.
+No of iterations = 17
+Elapsed time is 946.370413 seconds.
+No of iterations = 20
+Elapsed time is 710.206864 seconds.
+No of iterations = 17
+Elapsed time is 733.169712 seconds.
+No of iterations = 17
+Elapsed time is 784.303781 seconds.
+No of iterations = 19
+Elapsed time is 616.477583 seconds.
+No of iterations = 16
+Elapsed time is 801.178520 seconds.
+No of iterations = 19
+Elapsed time is 840.889849 seconds.
+No of iterations = 19
+Elapsed time is 700.389246 seconds.
+No of iterations = 17
+Elapsed time is 765.578686 seconds.
+No of iterations = 18
+Elapsed time is 794.719204 seconds.
+Iteration count = 21
+Elapsed time is 865.403157 seconds.
+Iteration count = 21
+Elapsed time is 767.498011 seconds.
+Iteration count = 19
+Elapsed time is 812.750347 seconds.
+Iteration count = 21
+Elapsed time is 786.667508 seconds.
+Iteration count = 21
+Elapsed time is 738.389023 seconds.
+Iteration count = 21
+Elapsed time is 784.873567 seconds.
+Iteration count = 21
+Elapsed time is 835.589008 seconds.
+Iteration count = 21
+Elapsed time is 781.035717 seconds.
+Iteration count = 21
+Elapsed time is 777.154976 seconds.
+Iteration count = 21
+
+------------------------------------------------------------------------------
+
+
+

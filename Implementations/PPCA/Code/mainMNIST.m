@@ -73,7 +73,7 @@ d = size(imagesTrain, 1);       % observed space dimension
 % 
 
 %% Missing Data Case using EM
-missPercent = 0.05;
+missPercent = 0.2;
 fprintf(fId, 'Miss Percentage = %f\n', missPercent*100);
 MissIndex = rand(size(imagesTrain)) > 1 - missPercent;
 fprintf(fId, 'Missing values count = %d\n', sum(sum(MissIndex)));
