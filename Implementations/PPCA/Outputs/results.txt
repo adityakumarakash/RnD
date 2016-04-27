@@ -298,3 +298,141 @@ Iteration count = 21
 ---------------------------------------------------------
 Miss Percentage = 60.000000
 Missing values count = 28219183
+Accurracy with PPCA Missing data with EM, with q = 133, is 83.490000
+
+Elapsed time is 2461.044394 seconds.
+No of iterations = 15
+Elapsed time is 3040.365266 seconds.
+No of iterations = 17
+Elapsed time is 2502.328590 seconds.
+No of iterations = 16
+Elapsed time is 2436.514380 seconds.
+No of iterations = 15
+Elapsed time is 2289.691862 seconds.
+No of iterations = 15
+Elapsed time is 2131.205283 seconds.
+No of iterations = 15
+Elapsed time is 2326.687750 seconds.
+No of iterations = 15
+Elapsed time is 2637.137743 seconds.
+No of iterations = 16
+Elapsed time is 2306.018978 seconds.
+No of iterations = 15
+Elapsed time is 2336.370323 seconds.
+No of iterations = 15
+
+Accurracy with PCA Missing data without EM, with q = 133, is 2.810000
+
+Elapsed time is 3118.674174 seconds.
+Iteration count = 21
+Elapsed time is 3539.806918 seconds.
+Iteration count = 21
+Elapsed time is 3102.664888 seconds.
+Iteration count = 21
+Elapsed time is 3217.695685 seconds.
+Iteration count = 21
+Elapsed time is 3066.671628 seconds.
+Iteration count = 21
+Elapsed time is 2834.962606 seconds.
+Iteration count = 21
+Elapsed time is 3114.767664 seconds.
+Iteration count = 21
+Elapsed time is 3304.190855 seconds.
+Iteration count = 21
+Elapsed time is 3058.473493 seconds.
+Iteration count = 21
+Elapsed time is 3125.378401 seconds.
+Iteration count = 21
+Miss Percentage = 30.000000
+Missing values count = 14109248
+
+
+-----------------------------------------------------------------
+
+
+
+Miss Percentage = 1.000000
+Missing values count = 470735
+Accurracy with PPCA Missing data with EM, with q = 133, is 88.400000
+Accurracy with PCA Missing data without EM, with q = 133, is 88.590000
+
+>> mainMNIST
+Elapsed time is 311.722900 seconds.
+No of iterations = 21
+Elapsed time is 445.300317 seconds.
+No of iterations = 27
+Elapsed time is 286.156165 seconds.
+No of iterations = 19
+Elapsed time is 322.169461 seconds.
+No of iterations = 21
+Elapsed time is 319.984916 seconds.
+No of iterations = 22
+Elapsed time is 268.889893 seconds.
+No of iterations = 20
+Elapsed time is 307.549855 seconds.
+No of iterations = 22
+Elapsed time is 363.089168 seconds.
+No of iterations = 24
+Elapsed time is 290.114386 seconds.
+No of iterations = 20
+Elapsed time is 337.922540 seconds.
+No of iterations = 23
+Elapsed time is 72.084686 seconds.
+Iteration count = 8
+Elapsed time is 315.720812 seconds.
+Iteration count = 31
+Elapsed time is 29.069856 seconds.
+Iteration count = 3
+Elapsed time is 145.134233 seconds.
+Iteration count = 15
+Elapsed time is 27.823327 seconds.
+Iteration count = 3
+Elapsed time is 51.091817 seconds.
+Iteration count = 6
+Elapsed time is 27.565384 seconds.
+Iteration count = 3
+Elapsed time is 57.080631 seconds.
+Iteration count = 6
+Elapsed time is 55.156016 seconds.
+Iteration count = 6
+Elapsed time is 35.548270 seconds.
+Iteration count = 4
+
+------------------------------------------------------------
+
+
+Accurracy with Standard PCA, with q = 133, is 87.970000
+Accurracy with PPCA without EM, with q = 133, is 87.970000
+
+Accurracy with PPCA with EM, with q = 133, is 87.910000
+
+>> mainMNIST
+No of iterations = 30
+No of iterations = 30
+No of iterations = 32
+No of iterations = 31
+No of iterations = 31
+No of iterations = 31
+No of iterations = 30
+No of iterations = 30
+No of iterations = 32
+No of iterations = 30
+
+-------------------------------------------------------------
+Accurracy with Standard PCA, with q = 10, is 9.270000
+Accurracy with Standard PCA, with q = 50, is 81.430000
+Accurracy with Standard PCA, with q = 100, is 87.730000
+Accurracy with Standard PCA, with q = 110, is 87.910000
+Accurracy with Standard PCA, with q = 120, is 87.650000
+Accurracy with Standard PCA, with q = 130, is 87.930000
+Accurracy with Standard PCA, with q = 133, is 87.970000
+Accurracy with Standard PCA, with q = 140, is 87.790000
+Accurracy with Standard PCA, with q = 150, is 87.570000
+Accurracy with Standard PCA, with q = 200, is 87.680000
+Accurracy with Standard PCA, with q = 250, is 87.990000
+Accurracy with Standard PCA, with q = 300, is 88.390000
+Accurracy with Standard PCA, with q = 350, is 88.270000
+Accurracy with Standard PCA, with q = 400, is 87.560000
+Accurracy with Standard PCA, with q = 450, is 86.590000
+Accurracy with Standard PCA, with q = 500, is 85.840000
+Accurracy with Standard PCA, with q = 550, is 85.110000

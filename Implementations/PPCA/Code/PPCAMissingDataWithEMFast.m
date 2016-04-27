@@ -30,7 +30,7 @@ tic
 while sum(sum(abs(W-WPrev)))/sum(sum(abs(WPrev))) > epsilon || abs(var-varPrev) > epsilon
     iteration = iteration + 1;
     YEst = YNew;
-    if iteration > 20
+    if iteration > 30
         break
     end
     % E step

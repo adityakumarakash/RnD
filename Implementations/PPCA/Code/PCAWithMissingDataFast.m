@@ -29,7 +29,7 @@ while sum(sum(abs(W - WPrev)))/sum(sum(abs(WPrev))) > epsilon || sum(abs(YMean -
     WPrev = W;
     YMeanPrev = YMean;
     iteration = iteration + 1;
-    if iteration > 20
+    if iteration > 30
         break
     end
     % minimize the error for |Y-XW| for the missing data case
