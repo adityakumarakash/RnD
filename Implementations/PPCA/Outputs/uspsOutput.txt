@@ -1,0 +1,332 @@
+
+------------------------------------------------------
+
+------------------------------------------------------
+
+------------------------------------------------------
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 2, is 8.909091
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 10, is 10.121212
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 20, is 10.424242
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 40, is 10.060606
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 10, is 9.939394
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 10, is 10.121212
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 20, is 24.121212
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 40, is 70.818182
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 60, is 85.606061
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 80, is 87.515152
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 87.787879
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 200, is 87.909091
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 250, is 88.575758
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 256, is 87.424242
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 89.363636
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 1, is 4.212121
+Accurracy with Standard PCA, with q = 2, is 7.090909
+Accurracy with Standard PCA, with q = 3, is 6.696970
+Accurracy with Standard PCA, with q = 4, is 6.060606
+Accurracy with Standard PCA, with q = 5, is 7.272727
+Accurracy with Standard PCA, with q = 6, is 7.424242
+Accurracy with Standard PCA, with q = 7, is 7.121212
+Accurracy with Standard PCA, with q = 8, is 9.515152
+Accurracy with Standard PCA, with q = 9, is 9.757576
+Accurracy with Standard PCA, with q = 10, is 10.000000
+Accurracy with Standard PCA, with q = 11, is 11.515152
+Accurracy with Standard PCA, with q = 12, is 12.393939
+Accurracy with Standard PCA, with q = 13, is 12.333333
+Accurracy with Standard PCA, with q = 14, is 13.575758
+Accurracy with Standard PCA, with q = 15, is 14.909091
+Accurracy with Standard PCA, with q = 16, is 15.939394
+Accurracy with Standard PCA, with q = 17, is 17.333333
+Accurracy with Standard PCA, with q = 18, is 19.878788
+Accurracy with Standard PCA, with q = 19, is 21.696970
+Accurracy with Standard PCA, with q = 20, is 24.818182
+Accurracy with Standard PCA, with q = 21, is 26.272727
+Accurracy with Standard PCA, with q = 22, is 27.636364
+Accurracy with Standard PCA, with q = 23, is 31.575758
+Accurracy with Standard PCA, with q = 24, is 36.181818
+Accurracy with Standard PCA, with q = 25, is 38.606061
+Accurracy with Standard PCA, with q = 26, is 41.000000
+Accurracy with Standard PCA, with q = 27, is 43.121212
+Accurracy with Standard PCA, with q = 28, is 44.969697
+Accurracy with Standard PCA, with q = 29, is 47.030303
+Accurracy with Standard PCA, with q = 30, is 47.666667
+Accurracy with Standard PCA, with q = 31, is 49.424242
+Accurracy with Standard PCA, with q = 32, is 51.121212
+Accurracy with Standard PCA, with q = 33, is 54.636364
+Accurracy with Standard PCA, with q = 34, is 58.303030
+Accurracy with Standard PCA, with q = 35, is 61.030303
+Accurracy with Standard PCA, with q = 36, is 64.696970
+Accurracy with Standard PCA, with q = 37, is 66.484848
+Accurracy with Standard PCA, with q = 38, is 68.181818
+Accurracy with Standard PCA, with q = 39, is 69.121212
+Accurracy with Standard PCA, with q = 40, is 70.212121
+Accurracy with Standard PCA, with q = 41, is 71.000000
+Accurracy with Standard PCA, with q = 42, is 73.909091
+Accurracy with Standard PCA, with q = 43, is 75.151515
+Accurracy with Standard PCA, with q = 44, is 76.060606
+Accurracy with Standard PCA, with q = 45, is 76.848485
+Accurracy with Standard PCA, with q = 46, is 77.515152
+Accurracy with Standard PCA, with q = 47, is 78.181818
+Accurracy with Standard PCA, with q = 48, is 79.242424
+Accurracy with Standard PCA, with q = 49, is 79.636364
+Accurracy with Standard PCA, with q = 50, is 80.030303
+Accurracy with Standard PCA, with q = 51, is 80.969697
+Accurracy with Standard PCA, with q = 52, is 81.272727
+Accurracy with Standard PCA, with q = 53, is 81.757576
+Accurracy with Standard PCA, with q = 54, is 82.424242
+Accurracy with Standard PCA, with q = 55, is 82.969697
+Accurracy with Standard PCA, with q = 56, is 83.121212
+Accurracy with Standard PCA, with q = 57, is 83.272727
+Accurracy with Standard PCA, with q = 58, is 83.909091
+Accurracy with Standard PCA, with q = 59, is 83.787879
+Accurracy with Standard PCA, with q = 60, is 84.181818
+Accurracy with Standard PCA, with q = 61, is 84.121212
+Accurracy with Standard PCA, with q = 62, is 84.424242
+Accurracy with Standard PCA, with q = 63, is 84.575758
+Accurracy with Standard PCA, with q = 64, is 84.757576
+Accurracy with Standard PCA, with q = 65, is 85.393939
+Accurracy with Standard PCA, with q = 66, is 86.000000
+Accurracy with Standard PCA, with q = 67, is 85.969697
+Accurracy with Standard PCA, with q = 68, is 86.242424
+Accurracy with Standard PCA, with q = 69, is 86.606061
+Accurracy with Standard PCA, with q = 70, is 86.454545
+Accurracy with Standard PCA, with q = 71, is 86.666667
+Accurracy with Standard PCA, with q = 72, is 86.848485
+Accurracy with Standard PCA, with q = 73, is 86.909091
+Accurracy with Standard PCA, with q = 74, is 87.151515
+Accurracy with Standard PCA, with q = 75, is 87.333333
+Accurracy with Standard PCA, with q = 76, is 87.787879
+Accurracy with Standard PCA, with q = 77, is 87.939394
+Accurracy with Standard PCA, with q = 78, is 88.151515
+Accurracy with Standard PCA, with q = 79, is 88.181818
+Accurracy with Standard PCA, with q = 80, is 88.090909
+Accurracy with Standard PCA, with q = 81, is 88.333333
+Accurracy with Standard PCA, with q = 82, is 88.060606
+Accurracy with Standard PCA, with q = 83, is 88.242424
+Accurracy with Standard PCA, with q = 84, is 88.181818
+Accurracy with Standard PCA, with q = 85, is 88.212121
+Accurracy with Standard PCA, with q = 86, is 88.272727
+Accurracy with Standard PCA, with q = 87, is 88.363636
+Accurracy with Standard PCA, with q = 88, is 88.818182
+Accurracy with Standard PCA, with q = 89, is 88.696970
+Accurracy with Standard PCA, with q = 90, is 88.818182
+Accurracy with Standard PCA, with q = 91, is 88.575758
+Accurracy with Standard PCA, with q = 92, is 88.818182
+Accurracy with Standard PCA, with q = 93, is 88.969697
+Accurracy with Standard PCA, with q = 94, is 88.818182
+Accurracy with Standard PCA, with q = 95, is 89.000000
+Accurracy with Standard PCA, with q = 96, is 89.030303
+Accurracy with Standard PCA, with q = 97, is 89.242424
+Accurracy with Standard PCA, with q = 98, is 89.333333
+Accurracy with Standard PCA, with q = 99, is 89.363636
+Accurracy with Standard PCA, with q = 100, is 89.333333
+Accurracy with Standard PCA, with q = 101, is 89.393939
+Accurracy with Standard PCA, with q = 102, is 89.121212
+Accurracy with Standard PCA, with q = 103, is 89.212121
+Accurracy with Standard PCA, with q = 104, is 89.272727
+Accurracy with Standard PCA, with q = 105, is 89.272727
+Accurracy with Standard PCA, with q = 106, is 89.121212
+Accurracy with Standard PCA, with q = 107, is 89.333333
+Accurracy with Standard PCA, with q = 108, is 89.242424
+Accurracy with Standard PCA, with q = 109, is 89.090909
+Accurracy with Standard PCA, with q = 110, is 89.272727
+Accurracy with Standard PCA, with q = 111, is 89.060606
+Accurracy with Standard PCA, with q = 112, is 89.000000
+Accurracy with Standard PCA, with q = 113, is 89.333333
+Accurracy with Standard PCA, with q = 114, is 89.030303
+Accurracy with Standard PCA, with q = 115, is 89.060606
+Accurracy with Standard PCA, with q = 116, is 89.000000
+Accurracy with Standard PCA, with q = 117, is 89.333333
+Accurracy with Standard PCA, with q = 118, is 89.363636
+Accurracy with Standard PCA, with q = 119, is 89.272727
+Accurracy with Standard PCA, with q = 120, is 89.212121
+Accurracy with Standard PCA, with q = 121, is 89.272727
+Accurracy with Standard PCA, with q = 122, is 89.333333
+Accurracy with Standard PCA, with q = 123, is 89.090909
+Accurracy with Standard PCA, with q = 124, is 89.242424
+Accurracy with Standard PCA, with q = 125, is 89.363636
+Accurracy with Standard PCA, with q = 126, is 89.212121
+Accurracy with Standard PCA, with q = 127, is 89.181818
+Accurracy with Standard PCA, with q = 128, is 89.060606
+Accurracy with Standard PCA, with q = 129, is 88.969697
+Accurracy with Standard PCA, with q = 130, is 88.969697
+Accurracy with Standard PCA, with q = 131, is 89.030303
+Accurracy with Standard PCA, with q = 132, is 89.000000
+Accurracy with Standard PCA, with q = 133, is 88.818182
+Accurracy with Standard PCA, with q = 134, is 89.030303
+Accurracy with Standard PCA, with q = 135, is 89.000000
+Accurracy with Standard PCA, with q = 136, is 89.030303
+Accurracy with Standard PCA, with q = 137, is 89.181818
+Accurracy with Standard PCA, with q = 138, is 89.030303
+Accurracy with Standard PCA, with q = 139, is 89.060606
+Accurracy with Standard PCA, with q = 140, is 88.878788
+Accurracy with Standard PCA, with q = 141, is 88.909091
+Accurracy with Standard PCA, with q = 142, is 88.909091
+Accurracy with Standard PCA, with q = 143, is 88.848485
+Accurracy with Standard PCA, with q = 144, is 88.969697
+Accurracy with Standard PCA, with q = 145, is 89.151515
+Accurracy with Standard PCA, with q = 146, is 88.969697
+Accurracy with Standard PCA, with q = 147, is 88.848485
+Accurracy with Standard PCA, with q = 148, is 88.939394
+Accurracy with Standard PCA, with q = 149, is 89.000000
+Accurracy with Standard PCA, with q = 150, is 88.969697
+Accurracy with Standard PCA, with q = 151, is 88.969697
+Accurracy with Standard PCA, with q = 152, is 89.030303
+Accurracy with Standard PCA, with q = 153, is 88.939394
+Accurracy with Standard PCA, with q = 154, is 88.787879
+Accurracy with Standard PCA, with q = 155, is 88.909091
+Accurracy with Standard PCA, with q = 156, is 88.969697
+Accurracy with Standard PCA, with q = 157, is 89.090909
+Accurracy with Standard PCA, with q = 158, is 88.878788
+Accurracy with Standard PCA, with q = 159, is 88.969697
+Accurracy with Standard PCA, with q = 160, is 88.969697
+Accurracy with Standard PCA, with q = 161, is 88.878788
+Accurracy with Standard PCA, with q = 162, is 88.939394
+Accurracy with Standard PCA, with q = 163, is 88.939394
+Accurracy with Standard PCA, with q = 164, is 88.909091
+Accurracy with Standard PCA, with q = 165, is 89.000000
+Accurracy with Standard PCA, with q = 166, is 88.909091
+Accurracy with Standard PCA, with q = 167, is 88.818182
+Accurracy with Standard PCA, with q = 168, is 89.000000
+Accurracy with Standard PCA, with q = 169, is 89.030303
+Accurracy with Standard PCA, with q = 170, is 88.939394
+Accurracy with Standard PCA, with q = 171, is 88.969697
+Accurracy with Standard PCA, with q = 172, is 88.787879
+Accurracy with Standard PCA, with q = 173, is 88.878788
+Accurracy with Standard PCA, with q = 174, is 88.848485
+Accurracy with Standard PCA, with q = 175, is 88.818182
+Accurracy with Standard PCA, with q = 176, is 88.818182
+Accurracy with Standard PCA, with q = 177, is 88.939394
+Accurracy with Standard PCA, with q = 178, is 88.818182
+Accurracy with Standard PCA, with q = 179, is 88.848485
+Accurracy with Standard PCA, with q = 180, is 88.848485
+Accurracy with Standard PCA, with q = 181, is 88.757576
+Accurracy with Standard PCA, with q = 182, is 88.848485
+Accurracy with Standard PCA, with q = 183, is 88.848485
+Accurracy with Standard PCA, with q = 184, is 88.939394
+Accurracy with Standard PCA, with q = 185, is 88.939394
+Accurracy with Standard PCA, with q = 186, is 88.939394
+Accurracy with Standard PCA, with q = 187, is 88.848485
+Accurracy with Standard PCA, with q = 188, is 88.848485
+Accurracy with Standard PCA, with q = 189, is 88.878788
+Accurracy with Standard PCA, with q = 190, is 88.909091
+Accurracy with Standard PCA, with q = 191, is 88.818182
+Accurracy with Standard PCA, with q = 192, is 88.848485
+Accurracy with Standard PCA, with q = 193, is 88.878788
+Accurracy with Standard PCA, with q = 194, is 88.787879
+Accurracy with Standard PCA, with q = 195, is 88.939394
+Accurracy with Standard PCA, with q = 196, is 88.878788
+Accurracy with Standard PCA, with q = 197, is 88.909091
+Accurracy with Standard PCA, with q = 198, is 88.848485
+Accurracy with Standard PCA, with q = 199, is 89.000000
+Accurracy with Standard PCA, with q = 200, is 89.000000
+Accurracy with Standard PCA, with q = 201, is 88.878788
+Accurracy with Standard PCA, with q = 202, is 89.030303
+Accurracy with Standard PCA, with q = 203, is 88.848485
+Accurracy with Standard PCA, with q = 204, is 89.090909
+Accurracy with Standard PCA, with q = 205, is 89.000000
+Accurracy with Standard PCA, with q = 206, is 88.727273
+Accurracy with Standard PCA, with q = 207, is 88.878788
+Accurracy with Standard PCA, with q = 208, is 88.909091
+Accurracy with Standard PCA, with q = 209, is 88.878788
+Accurracy with Standard PCA, with q = 210, is 88.909091
+Accurracy with Standard PCA, with q = 211, is 88.909091
+Accurracy with Standard PCA, with q = 212, is 88.757576
+Accurracy with Standard PCA, with q = 213, is 88.848485
+Accurracy with Standard PCA, with q = 214, is 88.818182
+Accurracy with Standard PCA, with q = 215, is 89.030303
+Accurracy with Standard PCA, with q = 216, is 88.969697
+Accurracy with Standard PCA, with q = 217, is 88.848485
+Accurracy with Standard PCA, with q = 218, is 88.939394
+Accurracy with Standard PCA, with q = 219, is 88.878788
+Accurracy with Standard PCA, with q = 220, is 88.666667
+Accurracy with Standard PCA, with q = 221, is 88.757576
+Accurracy with Standard PCA, with q = 222, is 88.696970
+Accurracy with Standard PCA, with q = 223, is 88.818182
+Accurracy with Standard PCA, with q = 224, is 88.757576
+Accurracy with Standard PCA, with q = 225, is 88.848485
+Accurracy with Standard PCA, with q = 226, is 88.909091
+Accurracy with Standard PCA, with q = 227, is 88.787879
+Accurracy with Standard PCA, with q = 228, is 88.696970
+Accurracy with Standard PCA, with q = 229, is 88.727273
+Accurracy with Standard PCA, with q = 230, is 88.727273
+Accurracy with Standard PCA, with q = 231, is 88.787879
+Accurracy with Standard PCA, with q = 232, is 88.818182
+Accurracy with Standard PCA, with q = 233, is 88.727273
+Accurracy with Standard PCA, with q = 234, is 88.606061
+Accurracy with Standard PCA, with q = 235, is 88.636364
+Accurracy with Standard PCA, with q = 236, is 88.606061
+Accurracy with Standard PCA, with q = 237, is 88.757576
+Accurracy with Standard PCA, with q = 238, is 88.636364
+Accurracy with Standard PCA, with q = 239, is 88.696970
+Accurracy with Standard PCA, with q = 240, is 88.606061
+Accurracy with Standard PCA, with q = 241, is 88.666667
+Accurracy with Standard PCA, with q = 242, is 88.606061
+Accurracy with Standard PCA, with q = 243, is 88.424242
+Accurracy with Standard PCA, with q = 244, is 88.575758
+Accurracy with Standard PCA, with q = 245, is 88.454545
+Accurracy with Standard PCA, with q = 246, is 88.606061
+Accurracy with Standard PCA, with q = 247, is 88.575758
+Accurracy with Standard PCA, with q = 248, is 88.424242
+Accurracy with Standard PCA, with q = 249, is 88.424242
+Accurracy with Standard PCA, with q = 250, is 88.454545
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 89.666667
+Accurracy with PPCA without EM, with q = 100, is 89.666667
+Accurracy with PPCA with EM, with q = 100, is 89.757576
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 101, is 87.727273
+Accurracy with PPCA without EM, with q = 101, is 87.727273
+Accurracy with PPCA with EM, with q = 101, is 87.606061
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 89.151515
+Accurracy with PPCA without EM, with q = 100, is 89.151515
+Accurracy with PPCA with EM, with q = 100, is 89.030303
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 87.636364
+Accurracy with PPCA without EM, with q = 100, is 87.636364
+Accurracy with PPCA with EM, with q = 100, is 87.727273
+Miss Percentage = 1.000000
+Missing values count = 25370
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 88.515152
+Accurracy with PPCA without EM, with q = 100, is 88.515152
+Accurracy with PPCA with EM, with q = 100, is 88.545455
+Miss Percentage = 1.000000
+Missing values count = 19751
