@@ -111,7 +111,7 @@ fprintf(fId, 'Accurracy with PPCA with EM, with q = %d, is %f\n', q, (sum(predic
  
 
 %% Missing Data Case using EM
-missPercent = 0.01;
+missPercent = 0.60;
 fprintf(fId, 'Miss Percentage = %f\n', missPercent*100);
 MissIndex = rand(size(imagesTrain)) > 1 - missPercent;
 fprintf(fId, 'Missing values count = %d\n', sum(sum(MissIndex)));
@@ -129,38 +129,38 @@ end
 
 [~, predictedLabels] = min(Dist, [], 2);
 fprintf(fId, 'Accurracy with PPCA Missing data with EM, with q = %d, is %f\n', q, (sum(predictedLabels == labelsTest))*100/size(labelsTest, 1));
-% 
-% 
-% %% Missing Data without EM case
-% % M is the missing data index
-% Dist = zeros(size(imagesTest, 2), digits);
-% for digit = 1 : digits
-%     Y = imagesTrain(:, labelsTrain == digit);
-%     Miss = MissIndex(:, labelsTrain == digit);
-%     [W, X] = PCAWithMissingDataFast(Y, q, Miss);
-%     mew = mean(Y, 2);
-%     XTest = W\(imagesTest - mew(:, ones(1, size(imagesTest, 2))));
-%     Dist(:, digit) = mahal(XTest', X');
-% end
-% 
-% [~, predictedLabels] = min(Dist, [], 2);
-% fprintf(fId, 'Accurracy with PCA Missing data without EM, with q = %d, is %f\n', q, (sum(predictedLabels == labelsTest))*100/size(labelsTest, 1));
 
-% %% Standard PCA with Missing data
-% % In this case of missing data, we minimize the fitting of gaussian
-% % likelihood to he complete data, we alternatively maximize the mew, Cov
-% % and the missing data estimation
-% 
-% % M is the missing data index
-% Dist = zeros(size(imagesTest, 2), digits);
-% for digit = 1 : digits
-%     Y = imagesTrain(:, labelsTrain == digit);
-%     Miss = MissIndex(:, labelsTrain == digit);
-%     [W, X] = StandardPCAWithMissingData(Y, q, Miss);
-%     mew = mean(Y, 2);
-%     XTest = W\(imagesTest - mew(:, ones(1, size(imagesTest, 2))));
-%     Dist(:, digit) = mahal(XTest', X');
-% end
-% 
-% [~, predictedLabels] = min(Dist, [], 2);
-% fprintf(fId, 'Accurracy with Standard PCA Missing data, with q = %d, is %f\n', q, (sum(predictedLabels == labelsTest))*100/size(labelsTest, 1));
+
+%% Missing Data without EM case
+% M is the missing data index
+Dist = zeros(size(imagesTest, 2), digits);
+for digit = 1 : digits
+    Y = imagesTrain(:, labelsTrain == digit);
+    Miss = MissIndex(:, labelsTrain == digit);
+    [W, X] = PCAWithMissingDataFast(Y, q, Miss);
+    mew = mean(Y, 2);
+    XTest = W\(imagesTest - mew(:, ones(1, size(imagesTest, 2))));
+    Dist(:, digit) = mahal(XTest', X');
+end
+
+[~, predictedLabels] = min(Dist, [], 2);
+fprintf(fId, 'Accurracy with PCA Missing data without EM, with q = %d, is %f\n', q, (sum(predictedLabels == labelsTest))*100/size(labelsTest, 1));
+
+%% Standard PCA with Missing data
+% In this case of missing data, we minimize the fitting of gaussian
+% likelihood to he complete data, we alternatively maximize the mew, Cov
+% and the missing data estimation
+
+% M is the missing data index
+Dist = zeros(size(imagesTest, 2), digits);
+for digit = 1 : digits
+    Y = imagesTrain(:, labelsTrain == digit);
+    Miss = MissIndex(:, labelsTrain == digit);
+    [W, X] = StandardPCAWithMissingData(Y, q, Miss);
+    mew = mean(Y, 2);
+    XTest = W\(imagesTest - mew(:, ones(1, size(imagesTest, 2))));
+    Dist(:, digit) = mahal(XTest', X');
+end
+
+[~, predictedLabels] = min(Dist, [], 2);
+fprintf(fId, 'Accurracy with Standard PCA Missing data, with q = %d, is %f\n', q, (sum(predictedLabels == labelsTest))*100/size(labelsTest, 1));

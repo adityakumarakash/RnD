@@ -330,3 +330,547 @@ Accurracy with PPCA without EM, with q = 100, is 88.515152
 Accurracy with PPCA with EM, with q = 100, is 88.545455
 Miss Percentage = 1.000000
 Missing values count = 19751
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 88.818182
+Accurracy with PPCA without EM, with q = 100, is 88.818182
+Accurracy with PPCA with EM, with q = 100, is 88.878788
+Miss Percentage = 1.000000
+Missing values count = 19521
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 88.272727
+Accurracy with PPCA without EM, with q = 100, is 88.272727
+Accurracy with PPCA with EM, with q = 100, is 88.333333
+Miss Percentage = 1.000000
+Missing values count = 19754
+Accurracy with PPCA Missing data with EM, with q = 100, is 89.151515
+
+Elapsed time is 55.365079 seconds.
+No of iterations = 101
+Elapsed time is 12.681055 seconds.
+No of iterations = 24
+Elapsed time is 20.597227 seconds.
+No of iterations = 38
+Elapsed time is 14.039125 seconds.
+No of iterations = 25
+Elapsed time is 21.376587 seconds.
+No of iterations = 39
+Elapsed time is 13.872955 seconds.
+No of iterations = 27
+Elapsed time is 11.061747 seconds.
+No of iterations = 21
+Elapsed time is 17.596194 seconds.
+No of iterations = 34
+Elapsed time is 14.191400 seconds.
+No of iterations = 26
+Elapsed time is 20.325009 seconds.
+No of iterations = 39
+
+
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 89.424242
+Accurracy with PPCA without EM, with q = 100, is 89.424242
+Accurracy with PPCA with EM, with q = 100, is 89.424242
+Miss Percentage = 0.500000
+Missing values count = 9723
+Accurracy with PPCA Missing data with EM, with q = 100, is 89.969697
+Accurracy with PCA Missing data without EM, with q = 100, is 89.575758
+Accurracy with Standard PCA Missing data, with q = 100, is 90.121212
+
+Elapsed time is 36.130688 seconds.
+No of iterations = 41
+Elapsed time is 11.079973 seconds.
+No of iterations = 26
+Elapsed time is 9.088641 seconds.
+No of iterations = 21
+Elapsed time is 8.841196 seconds.
+No of iterations = 21
+Elapsed time is 15.880597 seconds.
+No of iterations = 35
+Elapsed time is 12.338089 seconds.
+No of iterations = 28
+Elapsed time is 8.661465 seconds.
+No of iterations = 20
+Elapsed time is 14.397778 seconds.
+No of iterations = 32
+Elapsed time is 12.152494 seconds.
+No of iterations = 28
+Elapsed time is 11.314582 seconds.
+No of iterations = 27
+Elapsed time is 32.924913 seconds.
+Iteration count = 101
+Elapsed time is 1.744505 seconds.
+Iteration count = 5
+Elapsed time is 1.341426 seconds.
+Iteration count = 4
+Elapsed time is 2.679266 seconds.
+Iteration count = 8
+Elapsed time is 2.188477 seconds.
+Iteration count = 6
+Elapsed time is 1.750294 seconds.
+Iteration count = 5
+Elapsed time is 5.088348 seconds.
+Iteration count = 14
+Elapsed time is 2.433309 seconds.
+Iteration count = 7
+Elapsed time is 2.744446 seconds.
+Iteration count = 8
+Elapsed time is 4.379677 seconds.
+Iteration count = 13
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+
+
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 88.848485
+Accurracy with PPCA without EM, with q = 100, is 88.848485
+Accurracy with PPCA with EM, with q = 100, is 88.878788
+Miss Percentage = 1.000000
+Missing values count = 19497
+Accurracy with PPCA Missing data with EM, with q = 100, is 89.939394
+Accurracy with PCA Missing data without EM, with q = 100, is 89.727273
+Accurracy with Standard PCA Missing data, with q = 100, is 89.848485
+
+>> mainOtherDataset
+No of iterations = 51
+No of iterations = 78
+No of iterations = 66
+No of iterations = 64
+No of iterations = 68
+No of iterations = 64
+No of iterations = 52
+No of iterations = 69
+No of iterations = 64
+No of iterations = 60
+Elapsed time is 19.383491 seconds.
+No of iterations = 41
+Elapsed time is 11.634062 seconds.
+No of iterations = 24
+Elapsed time is 14.271517 seconds.
+No of iterations = 29
+Elapsed time is 12.884383 seconds.
+No of iterations = 27
+Elapsed time is 11.836524 seconds.
+No of iterations = 24
+Elapsed time is 15.510193 seconds.
+No of iterations = 31
+Elapsed time is 12.761963 seconds.
+No of iterations = 26
+Elapsed time is 15.442347 seconds.
+No of iterations = 32
+Elapsed time is 11.721397 seconds.
+No of iterations = 24
+Elapsed time is 10.474753 seconds.
+No of iterations = 22
+Elapsed time is 14.589054 seconds.
+Iteration count = 41
+Elapsed time is 1.910911 seconds.
+Iteration count = 5
+Elapsed time is 3.370718 seconds.
+Iteration count = 9
+Elapsed time is 3.012785 seconds.
+Iteration count = 8
+Elapsed time is 2.738055 seconds.
+Iteration count = 7
+Elapsed time is 3.047212 seconds.
+Iteration count = 8
+Elapsed time is 15.255629 seconds.
+Iteration count = 41
+Elapsed time is 2.357185 seconds.
+Iteration count = 6
+Elapsed time is 3.020110 seconds.
+Iteration count = 8
+Elapsed time is 13.633235 seconds.
+Iteration count = 37
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+
+
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 88.363636
+Accurracy with PPCA without EM, with q = 100, is 88.363636
+Accurracy with PPCA with EM, with q = 100, is 88.666667
+Miss Percentage = 5.000000
+Missing values count = 98569
+Accurracy with PPCA Missing data with EM, with q = 100, is 90.515152
+Accurracy with PCA Missing data without EM, with q = 100, is 90.545455
+Accurracy with Standard PCA Missing data, with q = 100, is 91.909091
+
+>> mainOtherDataset
+No of iterations = 49
+No of iterations = 71
+No of iterations = 62
+No of iterations = 69
+No of iterations = 66
+No of iterations = 62
+No of iterations = 61
+No of iterations = 77
+No of iterations = 64
+No of iterations = 68
+Elapsed time is 24.623198 seconds.
+No of iterations = 41
+Elapsed time is 23.723777 seconds.
+No of iterations = 40
+Elapsed time is 14.852290 seconds.
+No of iterations = 25
+Elapsed time is 14.560797 seconds.
+No of iterations = 25
+Elapsed time is 16.526551 seconds.
+No of iterations = 27
+Elapsed time is 23.198196 seconds.
+No of iterations = 41
+Elapsed time is 22.986986 seconds.
+No of iterations = 41
+Elapsed time is 22.584360 seconds.
+No of iterations = 38
+Elapsed time is 23.797500 seconds.
+No of iterations = 40
+Elapsed time is 23.850610 seconds.
+No of iterations = 41
+Elapsed time is 18.975414 seconds.
+Iteration count = 41
+Elapsed time is 9.569673 seconds.
+Iteration count = 20
+Elapsed time is 14.285549 seconds.
+Iteration count = 31
+Elapsed time is 7.411621 seconds.
+Iteration count = 16
+Elapsed time is 8.158646 seconds.
+Iteration count = 17
+Elapsed time is 18.384900 seconds.
+Iteration count = 41
+Elapsed time is 18.043411 seconds.
+Iteration count = 41
+Elapsed time is 12.601480 seconds.
+Iteration count = 26
+Elapsed time is 19.194821 seconds.
+Iteration count = 41
+Elapsed time is 19.534118 seconds.
+Iteration count = 41
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+
+
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 88.393939
+Accurracy with PPCA without EM, with q = 100, is 88.393939
+Accurracy with PPCA with EM, with q = 100, is 88.272727
+Miss Percentage = 10.000000
+Missing values count = 196952
+Accurracy with PPCA Missing data with EM, with q = 100, is 91.878788
+Accurracy with PCA Missing data without EM, with q = 100, is 91.606061
+Accurracy with Standard PCA Missing data, with q = 100, is 93.363636
+
+>> mainOtherDataset
+No of iterations = 45
+No of iterations = 74
+No of iterations = 81
+No of iterations = 64
+No of iterations = 81
+No of iterations = 66
+No of iterations = 46
+No of iterations = 73
+No of iterations = 58
+No of iterations = 59
+Elapsed time is 28.676306 seconds.
+No of iterations = 41
+Elapsed time is 29.101828 seconds.
+No of iterations = 41
+Elapsed time is 24.341743 seconds.
+No of iterations = 33
+Elapsed time is 28.991963 seconds.
+No of iterations = 41
+Elapsed time is 28.981432 seconds.
+No of iterations = 41
+Elapsed time is 30.251234 seconds.
+No of iterations = 41
+Elapsed time is 28.072997 seconds.
+No of iterations = 41
+Elapsed time is 28.147707 seconds.
+No of iterations = 41
+Elapsed time is 28.037912 seconds.
+No of iterations = 41
+Elapsed time is 28.909462 seconds.
+No of iterations = 41
+Elapsed time is 23.316687 seconds.
+Iteration count = 41
+Elapsed time is 23.799480 seconds.
+Iteration count = 41
+Elapsed time is 24.265488 seconds.
+Iteration count = 41
+Elapsed time is 23.841476 seconds.
+Iteration count = 41
+Elapsed time is 23.749165 seconds.
+Iteration count = 41
+Elapsed time is 24.201856 seconds.
+Iteration count = 41
+Elapsed time is 22.906978 seconds.
+Iteration count = 41
+Elapsed time is 23.174588 seconds.
+Iteration count = 41
+Elapsed time is 23.124110 seconds.
+Iteration count = 41
+Elapsed time is 24.045937 seconds.
+Iteration count = 41
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+
+
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 90.393939
+Accurracy with PPCA without EM, with q = 100, is 90.393939
+Accurracy with PPCA with EM, with q = 100, is 90.515152
+Miss Percentage = 20.000000
+Missing values count = 394430
+Accurracy with PPCA Missing data with EM, with q = 100, is 92.303030
+Accurracy with PCA Missing data without EM, with q = 100, is 92.484848
+Accurracy with Standard PCA Missing data, with q = 100, is 93.878788
+
+>> mainOtherDataset
+No of iterations = 50
+No of iterations = 71
+No of iterations = 64
+No of iterations = 65
+No of iterations = 63
+No of iterations = 59
+No of iterations = 45
+No of iterations = 73
+No of iterations = 61
+No of iterations = 57
+Elapsed time is 39.212197 seconds.
+No of iterations = 41
+Elapsed time is 40.011657 seconds.
+No of iterations = 41
+Elapsed time is 38.091153 seconds.
+No of iterations = 41
+Elapsed time is 38.736179 seconds.
+No of iterations = 41
+Elapsed time is 38.083810 seconds.
+No of iterations = 41
+Elapsed time is 38.606349 seconds.
+No of iterations = 41
+Elapsed time is 37.988876 seconds.
+No of iterations = 41
+Elapsed time is 38.113195 seconds.
+No of iterations = 41
+Elapsed time is 39.653047 seconds.
+No of iterations = 41
+Elapsed time is 38.384696 seconds.
+No of iterations = 41
+Elapsed time is 34.553427 seconds.
+Iteration count = 41
+Elapsed time is 35.530006 seconds.
+Iteration count = 41
+Elapsed time is 33.629063 seconds.
+Iteration count = 41
+Elapsed time is 34.696033 seconds.
+Iteration count = 41
+Elapsed time is 34.566626 seconds.
+Iteration count = 41
+Elapsed time is 34.192431 seconds.
+Iteration count = 41
+Elapsed time is 33.709041 seconds.
+Iteration count = 41
+Elapsed time is 33.651827 seconds.
+Iteration count = 41
+Elapsed time is 35.188607 seconds.
+Iteration count = 41
+Elapsed time is 34.572370 seconds.
+Iteration count = 41
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+
+
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 88.303030
+Accurracy with PPCA without EM, with q = 100, is 88.303030
+Accurracy with PPCA with EM, with q = 100, is 88.636364
+Miss Percentage = 40.000000
+Missing values count = 789381
+Accurracy with PPCA Missing data with EM, with q = 100, is 83.696970
+Accurracy with PCA Missing data without EM, with q = 100, is 84.636364
+Accurracy with Standard PCA Missing data, with q = 100, is 91.515152
+
+>> mainOtherDataset
+No of iterations = 43
+No of iterations = 70
+No of iterations = 69
+No of iterations = 69
+No of iterations = 70
+No of iterations = 60
+No of iterations = 47
+No of iterations = 81
+No of iterations = 61
+No of iterations = 55
+Elapsed time is 64.393098 seconds.
+No of iterations = 41
+Elapsed time is 64.458833 seconds.
+No of iterations = 41
+Elapsed time is 66.502444 seconds.
+No of iterations = 41
+Elapsed time is 65.058636 seconds.
+No of iterations = 41
+Elapsed time is 64.995105 seconds.
+No of iterations = 41
+Elapsed time is 67.094850 seconds.
+No of iterations = 41
+Elapsed time is 62.943796 seconds.
+No of iterations = 41
+Elapsed time is 66.263107 seconds.
+No of iterations = 41
+Elapsed time is 65.005775 seconds.
+No of iterations = 41
+Elapsed time is 64.014042 seconds.
+No of iterations = 41
+Elapsed time is 64.373365 seconds.
+Iteration count = 41
+Elapsed time is 65.980035 seconds.
+Iteration count = 41
+Elapsed time is 68.537117 seconds.
+Iteration count = 41
+Elapsed time is 66.033493 seconds.
+Iteration count = 41
+Elapsed time is 66.071921 seconds.
+Iteration count = 41
+Elapsed time is 68.407826 seconds.
+Iteration count = 41
+Elapsed time is 63.433721 seconds.
+Iteration count = 41
+Elapsed time is 68.132610 seconds.
+Iteration count = 41
+Elapsed time is 66.520130 seconds.
+Iteration count = 41
+Elapsed time is 65.660690 seconds.
+Iteration count = 41
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+
+
+
+------------------------------------------------------
+Accurracy with Standard PCA, with q = 100, is 88.606061
+Accurracy with PPCA without EM, with q = 100, is 88.606061
+Accurracy with PPCA with EM, with q = 100, is 88.787879
+Miss Percentage = 60.000000
+Missing values count = 1183202
+Accurracy with PPCA Missing data with EM, with q = 100, is 55.212121
+Accurracy with PCA Missing data without EM, with q = 100, is 52.303030
+Accurracy with Standard PCA Missing data, with q = 100, is 88.757576
+
+>> mainOtherDataset
+No of iterations = 43
+No of iterations = 75
+No of iterations = 77
+No of iterations = 64
+No of iterations = 71
+No of iterations = 60
+No of iterations = 46
+No of iterations = 95
+No of iterations = 56
+No of iterations = 57
+Elapsed time is 88.266019 seconds.
+No of iterations = 41
+Elapsed time is 88.001260 seconds.
+No of iterations = 41
+Elapsed time is 91.030504 seconds.
+No of iterations = 41
+Elapsed time is 90.004963 seconds.
+No of iterations = 41
+Elapsed time is 90.501659 seconds.
+No of iterations = 41
+Elapsed time is 89.143735 seconds.
+No of iterations = 41
+Elapsed time is 89.737049 seconds.
+No of iterations = 41
+Elapsed time is 89.608565 seconds.
+No of iterations = 41
+Elapsed time is 91.048875 seconds.
+No of iterations = 41
+Elapsed time is 90.153238 seconds.
+No of iterations = 41
+Elapsed time is 90.385647 seconds.
+Iteration count = 41
+Elapsed time is 88.896080 seconds.
+Iteration count = 41
+Elapsed time is 90.717167 seconds.
+Iteration count = 41
+Elapsed time is 92.372765 seconds.
+Iteration count = 41
+
+Elapsed time is 377.037960 seconds.
+Iteration count = 41
+Elapsed time is 91.052239 seconds.
+Iteration count = 41
+Elapsed time is 92.057406 seconds.
+Iteration count = 41
+Elapsed time is 91.433151 seconds.
+Iteration count = 41
+Elapsed time is 92.810927 seconds.
+Iteration count = 41
+Elapsed time is 91.509615 seconds.
+Iteration count = 41
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
+Iteration count = 1
