@@ -1,0 +1,78 @@
+\chapter {Insights from ``longest prefix
+satisfying p'' problem}
+
+In this Chapter we discuss the problem of finding the length of the longest prefix of a list which satisfies a given arbitrary predicate $p$. This is a problem that has been studied by Ankit in his project. The derivation of this problem is challenging to automate using the current tactics available in Coq because mechanical simplification alone is not enough to reveal the recursive part. We see why it is so in the derivation ahead. Also, efficient solutions to problems in this class exist only when p satisfies certain conditions. Deriving these conditions required human insights and ingenuity. As a consequence, much of the intelligent parts of the derivation had been carried out by him manually. Our target is to automate, or at least assist the derivation by suggesting useful propositions wherever mechanical simplification gets stuck and is just not enough to take us ahead. We make an interesting connection here with the concept of inductive synthesis, which is essentially performing program synthesis by operating over input-output examples. We observe intuitionally how inductive synthesis can be fused into the deductive program derivation approach, leading to both these techniques working in tandem and complementing each other's weaknesses.
+
+\section{Problem Specification}
+For the sake of convenience, we first discuss the derivation of finding the longest prefix itself (and not just its length). We start without assuming any property of $p$ and our end goal is to obtain a linear time solution for the problem. In the process we would derive sufficient conditions on $p$ so as to attain the goal. However, we are not interested in studying the full derivation and focus only on the road blocks that come on our way. For most part of the derivation mechanical simplification suffices. However, as we are going to see ahead, we reach a point where human intervention is required to proceed any further. \\\\
+To start with, we have the following naive algorithm for solving our problem:
+
+\begin{center}
+\emph{longest p = argmax length $\circ$ filter p $\circ$ inits}
+\end{center}
+
+\section{Derivation}
+\begin{equation*}
+\begin{split}
+longest\: p \: [ \: ] &= \{\text{definition of}\: longest \: p\} \\ &\quad \; argmax \: length \: (filter \: p \: (inits \: [ \: ])) \\\\
+&= \{\text{definition of}\: inits\} \\ &\quad \; argmax \: length \: (filter \: p [[ \: ]]) \\\\
+&= \{\text{definition of}\: filter \: p\: [ \: ] \: = \: true\} \\ &\quad \; argmax \: length \: [[ \: ]] \\\\
+&= \{\text{definition of}\: argmax\} \\ &\quad \; [ \: ]
+\end{split}
+\end{equation*}\\
+
+\begin{equation}
+\begin{split}
+longest\: p\: (x \: : \: xs) &= \{\text{definition of}\: longest \: p\} \\ &\quad \; argmax \: length \: (filter \: p \: (inits \: (x \: : \: xs))) \\\\
+&= \{\text{definition of}\: inits\} \\ &\quad \; argmax \: length \: (filter \: p\: ([\: ] \: : \: map \: (x \: :) \: (inits \: xs))) \\\\
+&= \{\text{definition of}\: filter \: p\: [ \: ] \: = \: true\} \\ &\quad \; argmax \: length \: ([ \: ] \: :\: filter \: p \: (map\: (x\: :)\: (inits\: xs))) \\\\
+&= \{\text{rewrite :}\: filter\: p\: \circ\: map\: f\: =\: map\: f\: \circ\: filter\: (p\: \circ\: f)\} \\ &\quad \; argmax \: length\: ([\: ]\: :\: map\: (x\: :)\: (filter\: (p\: \circ\: (x\: :))\: (inits\: xs)))
+\end{split}
+\end{equation}\\\\
+As stated before, our efforts during simplification must be directed towards getting the recursive part. However, there is no obvious way to simplify further from this point, since we do not know anything more about $p$. From here, the idea is to force the dependence on the recursive call and eliminate anything else by imposing restrictions on $p$.\\\\
+Let $ys \: =\: longest\: p \: xs$ (the result from the recursive call). Hence,
+\begin{equation}
+xs\: = \: ys \: \doubleplus \: zs
+\end{equation}\\
+for some $zs$. We use the following identity:\\
+\begin{equation*}
+inits \: xs \: =\:  inits\:  (ys \: \doubleplus \: zs) \: = \: (inits \: ys) \: \doubleplus \:  (map \: (ys \doubleplus) \: (tail \: (inits \: zs)))
+\end{equation*}\\
+which gives us\\
+\begin{equation*}
+\begin{split}
+&= \: argmax \: length \: ([ \: ] \: : \: map \: (x \: :) \: (filter \: (p \: \circ \: (x \: :)) \: (inits \: (ys \: \doubleplus \: zs)))\\
+&= \: argmax \: length \: ([ \: ] \: : \: map \: (x \: :) \: (filter \: (p \: \circ \: (x \: :))\\
+&\qquad \; ((inits \: ys) \: \doubleplus \: (map \: (ys\doubleplus) \: (tail \: (inits \: zs))))))
+\end{split}
+\end{equation*}\\
+
+\noindent
+After this, the derivation proceeds further until we get stuck again at a point where we do not know the value of $zs$. However, before reaching the next road block, you could have noticed by now that equation 5.2 is an outcome of human insight, and that the derivation stuck at equation 5.1 could move ahead only after feeding in equation 5.2. How could the fact that the answer for a given input list is actually a prefix of it, be made to realize by the synthesizer during the derivation ? This is where inductive synthesis offers hope.
+
+\section{Help from I/O Examples}
+Suppose we were given the following input-output pairs as examples for the program, \\
+\begin{align*}
+longest\: p\: [\:] &=\: [\:] \\
+longest\: p\: [1,2,3,4] &=\: [1,2,3] \\
+longest\: p\: [2,3,4] &=\: [2,3] \\
+longest\: p\: [3,4] &=\: [3] \\
+longest\: p\: [4] &=\: [\:]
+\end{align*}
+
+\noindent
+we could infer from them the fact that the answer $ys$ to $(longest\: p\: xs)$ is actually a prefix of $xs$. The semantics of the term $prefix$, would assert that $xs$ and $ys$ are related through equation 5.2 for some list $zs$. In fact, we could go a step further and make assertions which relate the answers of inputs across recursive calls. That is, we could say things like the answer for a given input list $x:xs$ is either the empty list ($[\:]$), or $x$ appended to the answer for the recursive call on $xs$. That is, \\\\
+\begin{equation}
+\begin{split}
+longest\: p\: (x:xs) &= \: [\:]\qquad \qquad \qquad \qquad \qquad  if\: (?f\: x\: xs) \\
+&=\: x\: :\: (longest\: p\: xs)\qquad \quad otherwise
+\end{split}
+\end{equation}\\
+
+\noindent
+where $?f$ is a predicate that is to be computed and would involve use of the given predicate $p$ inside its body. \\\\
+One important question to ask now is how do we come up with a relation like the one in equation 5.2. Clearly, we could keep a database of rewrite rules which relate to properties like list $a$ is a prefix of list $b$, list $a$ is a suffix of list $b$, list $a$ is a segment of list $b$, etc. We could define similar rules for other structures like trees (tree $a$ is a subtree of $b$), matrices (matrix $a$ is a submatrix of $b$), etc. Based on the type of the input in our problem, we might look for satisfying properties corresponding to that type one by one from our database, which satisfy the given I/O examples.
+
+\section{\emph{Igor2} and its Drawback}
+It would be suitable to talk now about the advantages of this approach over the purely inductive synthesis algorithm \emph{Igor2}. The algorithm for \emph{Igor2} has been proposed by Emmanuel Kitzelmann in \cite{kitzelmann2011combined}. An example synthesis for the \emph{reverse} function for lists has been demonstrated in his thesis. We choose not to mention the algorithm here due to too many technical intricacies, but we encourage the reader to go through the example synthesis for better understanding of it. The algorithm essentially proceeds by iteratively applying 3 kinds of transformations to an initial program that most generally satisfies all the given I/O examples. These tranformations are \emph{rule splitting}, \emph{introducing subfunctions} and \emph{folding back through function calls}. We start by searching through the most general functions for an initial candidate program, and keep partitioning the input examples into groups, each of which satisfy a particular rule, whenever our program fails to simplify further. This is the \emph{rule splitting} transformation. Note that a rule here is a mapping from an input pattern to an output pattern. Secondly, we try to introduce new subfunctions in place of the arguments of the constructor whenever the output pattern of a rule has a constructor at its root. This is the \emph{introduction of subfunctions} transformation. We also generate I/O examples for the new subfunctions we introduced, from the given I/O examples, as we now need to solve for these subfunctions as well. The third kind of transformation, \emph{folding back through function calls}, is what introduces recursion into our program. It essentially folds back the function calls of new subfunctions to function calls of existing functions. This involves mapping the arguments of the new function to the arguments of an existing function in such a way that the outputs remain the same over the given examples. These three transformations are applied iteratively to a working set of candidate programs to obtain the final desired program. Also the programs with a lower degree of rule splitting are explored first in order to favour the synthesis of more general programs over the specific ones. \\\\
+On deeper inspection of $Igor2$, we notice that even though the I/O examples are used to guide the synthesis of the desired program in the algorithm, it fails to explore certain relations across the examples provided. The final output program is one that satisfies all the I/O examples; but for the sake of the algorithm, all examples are independent upto being grouped within the same rule. This prevents it from relating the output corresponding to a larger input and the output corresponding to a smaller input, that arises as a sub-problem of the larger input. Like we saw in the previous section, the answer for the longest prefix satisfying $p$ for the input list $(x : xs)$ depends on the answer for the smaller list $xs$ through equation 5.3. Inferring such relations is not possible in $Igor2$, as no where does it realize the fact that two inputs are related structurally. Our goal is to enable discovery of such relations in our synthesizer.

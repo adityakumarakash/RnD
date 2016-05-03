@@ -1,0 +1,12 @@
+\begin{coqdoccode}
+\coqdocnoindent
+\coqdockw{Inductive} \coqdocvar{even} : \coqdocvar{N} \ensuremath{\rightarrow} \coqdockw{Prop} :=\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{even\_0} : \coqdocvar{even} 0\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{even\_S} \coqdocvar{n} : \coqdocvar{odd} \coqdocvar{n} \ensuremath{\rightarrow} \coqdocvar{even} (\coqdocvar{n} + 1)\coqdoceol
+\coqdocnoindent
+\coqdockw{with} \coqdocvar{odd} : \coqdocvar{N} \ensuremath{\rightarrow} \coqdockw{Prop} :=\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{odd\_S} \coqdocvar{n} : \coqdocvar{even} \coqdocvar{n} \ensuremath{\rightarrow} \coqdocvar{odd} (\coqdocvar{n} + 1).\coqdoceol
+\end{coqdoccode}

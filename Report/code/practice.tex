@@ -1,0 +1,138 @@
+\documentclass[12pt]{report}
+\usepackage[]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fullpage}
+\usepackage{coqdoc}
+\usepackage{amsmath,amssymb}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This file has been automatically generated with the command
+%% coqdoc --latex ../../sf/practice.v 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\coqlibrary{practice}{Library }{practice}
+
+\begin{coqdoccode}
+\coqdocnoindent
+\coqdockw{Require} \coqdockw{Import} \coqdocvar{HOUnify}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Inductive} \coqdocvar{list} (\coqdocvar{A} : \coqdockw{Type}) : \coqdockw{Type} :=\coqdoceol
+\coqdocindent{0.50em}
+\ensuremath{|} \coqdocvar{nil} : \coqdocvar{list} \coqdocvar{A}\coqdoceol
+\coqdocindent{0.50em}
+\ensuremath{|} \coqdocvar{cons} : \coqdocvar{A} \ensuremath{\rightarrow} \coqdocvar{list} \coqdocvar{A}\ensuremath{\rightarrow} \coqdocvar{list} \coqdocvar{A}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdocvar{Arguments} \coqdocvar{cons} \{\coqdocvar{A}\} \coqdocvar{\_} \coqdocvar{\_}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Fixpoint} \coqdocvar{app'} \coqdocvar{X} \coqdocvar{l1} \coqdocvar{l2} : \coqdocvar{list} \coqdocvar{X} :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{match} \coqdocvar{l1} \coqdockw{with}\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{nil} \ensuremath{\Rightarrow} \coqdocvar{l2}\coqdoceol
+\coqdocindent{1.00em}
+\ensuremath{|} \coqdocvar{cons} \coqdocvar{h} \coqdocvar{t} \ensuremath{\Rightarrow} \coqdocvar{cons} \coqdocvar{h} (\coqdocvar{app'} \coqdocvar{X} \coqdocvar{t} \coqdocvar{l2})\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{end}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Fixpoint} \coqdocvar{append} \{\coqdocvar{A} : \coqdockw{Type}\} (\coqdocvar{l1} \coqdocvar{l2} : \coqdocvar{list} \coqdocvar{A}) : \coqdocvar{list} \coqdocvar{A} :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{match} \coqdocvar{l1} \coqdockw{with}\coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} \coqdocvar{nil} \ensuremath{\Rightarrow} \coqdocvar{l2}\coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} (\coqdocvar{cons} \coqdocvar{h} \coqdocvar{t}) \ensuremath{\Rightarrow} (\coqdocvar{cons} \coqdocvar{h} (\coqdocvar{append} \coqdocvar{t} \coqdocvar{l2}))\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{end}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Check} \coqdocvar{append}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Check} \coqdocvar{nil}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Theorem} \coqdocvar{append\_assoc} : \coqdockw{\ensuremath{\forall}} (\coqdocvar{A} : \coqdockw{Type}) (\coqdocvar{l1} \coqdocvar{l2} \coqdocvar{l3} : \coqdocvar{list} \coqdocvar{A}),\coqdoceol
+\coqdocindent{1.00em}
+(\coqdocvar{append} (\coqdocvar{append} \coqdocvar{l1} \coqdocvar{l2}) \coqdocvar{l3}) = (\coqdocvar{append} \coqdocvar{l1} (\coqdocvar{append} \coqdocvar{l2} \coqdocvar{l3})).\coqdoceol
+\coqdocnoindent
+\coqdockw{Proof}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdoctac{intros} \coqdocvar{A} \coqdocvar{l1} \coqdocvar{l2} \coqdocvar{l3}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdoctac{induction} \coqdocvar{l1} \coqdockw{as} [| \coqdocvar{h} \coqdocvar{tl'}].\coqdoceol
+\coqdocindent{1.00em}
+\coqdoctac{reflexivity}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdoctac{simpl}. \coqdoctac{rewrite} \ensuremath{\leftarrow} \coqdocvar{IHtl'}. \coqdoctac{reflexivity}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Qed}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Fixpoint} \coqdocvar{map} (\coqdocvar{A} : \coqdockw{Type}) (\coqdocvar{B} : \coqdockw{Type}) (\coqdocvar{f} : \coqdocvar{A} \ensuremath{\rightarrow} \coqdocvar{B}) (\coqdocvar{l} : \coqdocvar{list} \coqdocvar{A}) : \coqdocvar{list} \coqdocvar{B} :=\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{match} \coqdocvar{l} \coqdockw{with}\coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} \coqdocvar{nil} \ensuremath{\Rightarrow} \coqdocvar{nil} \coqdocvar{B}\coqdoceol
+\coqdocindent{2.00em}
+\ensuremath{|} \coqdocvar{cons} \coqdocvar{h} \coqdocvar{t} \ensuremath{\Rightarrow} \coqdocvar{cons} (\coqdocvar{f} \coqdocvar{h}) (\coqdocvar{map} \coqdocvar{A} \coqdocvar{B} \coqdocvar{f} \coqdocvar{t})\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{end}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Theorem} \coqdocvar{commute} : \coqdockw{\ensuremath{\forall}} (\coqdocvar{A} \coqdocvar{B} : \coqdockw{Type}) (\coqdocvar{f} : \coqdocvar{A} \ensuremath{\rightarrow} \coqdocvar{B}) (\coqdocvar{l1}  \coqdocvar{l2}: \coqdocvar{list} \coqdocvar{A}),\coqdoceol
+\coqdocindent{1.00em}
+(\coqdocvar{map} \coqdocvar{A} \coqdocvar{B} \coqdocvar{f} (\coqdocvar{append} \coqdocvar{l1} \coqdocvar{l2})) = (\coqdocvar{append} (\coqdocvar{map} \coqdocvar{A} \coqdocvar{B} \coqdocvar{f} \coqdocvar{l1}) (\coqdocvar{map} \coqdocvar{A} \coqdocvar{B} \coqdocvar{f} \coqdocvar{l2})).\coqdoceol
+\coqdocnoindent
+\coqdockw{Proof}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdoctac{intros} \coqdocvar{A} \coqdocvar{B} \coqdocvar{f} \coqdocvar{l1} \coqdocvar{l2}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdoctac{induction} \coqdocvar{l1} \coqdockw{as} [| \coqdocvar{h} \coqdocvar{t}].\coqdoceol
+\coqdocindent{1.00em}
+\coqdoctac{simpl}. \coqdoctac{reflexivity}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdoctac{simpl}. \coqdoctac{rewrite} \ensuremath{\leftarrow} \coqdocvar{IHt}. \coqdoctac{reflexivity}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{Qed}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Print} \coqdocvar{commute}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Check} \coqdocvar{list\_ind}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Check} \coqdocvar{eq\_ind}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Check} \coqdocvar{eq\_refl}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Lemma} \coqdocvar{silly\_implication} : (1 + 1) = 2 \ensuremath{\rightarrow} (\coqdocvar{mult} 0 3) = 0.\coqdoceol
+\coqdocnoindent
+\coqdockw{Proof}. \coqdoctac{intros} \coqdocvar{H}. \coqdoctac{reflexivity}. \coqdockw{Qed}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Print} \coqdocvar{silly\_implication}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Theorem} \coqdocvar{proj1} : \coqdockw{\ensuremath{\forall}} \coqdocvar{P} \coqdocvar{Q} : \coqdockw{Prop},\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{and} \coqdocvar{P} \coqdocvar{Q} \ensuremath{\rightarrow} \coqdocvar{P}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Proof}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdoctac{intros} \coqdocvar{P} \coqdocvar{Q} \coqdocvar{H}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdoctac{destruct} \coqdocvar{H} \coqdockw{as} [\coqdocvar{HP} \coqdocvar{HQ}].\coqdoceol
+\coqdocindent{1.00em}
+\coqdoctac{apply} \coqdocvar{HP}. \coqdockw{Qed}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Lemma} \coqdocvar{silly} : \coqdocvar{mult} 0 3 = 0.\coqdoceol
+\coqdocnoindent
+\coqdockw{Proof}. \coqdoctac{reflexivity}. \coqdockw{Qed}.\coqdoceol
+\coqdocemptyline
+\coqdocnoindent
+\coqdockw{Print} \coqdocvar{silly}.\coqdoceol
+\coqdocemptyline
+\end{coqdoccode}
+\end{document}

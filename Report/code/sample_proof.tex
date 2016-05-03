@@ -1,0 +1,18 @@
+\begin{coqdoccode}
+\coqdocnoindent
+\coqdockw{Theorem} \coqdocvar{plus\_assoc} : \coqdockw{\ensuremath{\forall}} \coqdocvar{n} \coqdocvar{m} \coqdocvar{p} : \coqdocvar{nat},\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{n} + (\coqdocvar{m} + \coqdocvar{p}) = (\coqdocvar{n} + \coqdocvar{m}) + \coqdocvar{p}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Proof}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdoctac{intros} \coqdocvar{n} \coqdocvar{m} \coqdocvar{p}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdoctac{induction} \coqdocvar{n} \coqdockw{as} [|\coqdocvar{n'}].\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{Case} "0". \coqdoctac{simpl}. \coqdoctac{reflexivity}.\coqdoceol
+\coqdocindent{1.00em}
+\coqdocvar{Case} "S m". \coqdoctac{simpl}. \coqdoctac{rewrite} \ensuremath{\rightarrow} \coqdocvar{IHn'}. \coqdoctac{reflexivity}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Qed}.\coqdoceol
+\end{coqdoccode}

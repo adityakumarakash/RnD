@@ -1,0 +1,96 @@
+\begin{thebibliography}{10}
+
+\bibitem{ahmed2013automatically}
+Umair~Z Ahmed, Sumit Gulwani, and Amey Karkare.
+\newblock Automatically generating problems and solutions for natural
+  deduction.
+\newblock In {\em Proceedings of the Twenty-Third international joint
+  conference on Artificial Intelligence}, pages 1968--1975. AAAI Press, 2013.
+
+\bibitem{alvin2014synthesis}
+Christopher Alvin, Sumit Gulwani, Rupak Majumdar, and Supratik Mukhopadhyay.
+\newblock Synthesis of geometry proof problems.
+\newblock In {\em Proc. AAAI Conference on Artificial Intelligence}, 2014.
+
+\bibitem{cheema2012quickdraw}
+Salman Cheema, Sumit Gulwani, and Joseph LaViola.
+\newblock Quickdraw: improving drawing experience for geometric diagrams.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, pages 1037--1064. ACM, 2012.
+
+\bibitem{coquand1988calculus}
+Thierry Coquand and Gerard Huet.
+\newblock The calculus of constructions.
+\newblock {\em Information and computation}, 76(2):95--120, 1988.
+
+\bibitem{de2001higher}
+Oege de~Moor and Ganesh Sittampalam.
+\newblock Higher-order matching for program transformation.
+\newblock {\em Theoretical Computer Science}, 269(1):135--162, 2001.
+
+\bibitem{goldfarb1981undecidability}
+Warren~D Goldfarb.
+\newblock The undecidability of the second-order unification problem.
+\newblock {\em Theoretical Computer Science}, 13(2):225--230, 1981.
+
+\bibitem{gulwani2010dimensions}
+Sumit Gulwani.
+\newblock Dimensions in program synthesis.
+\newblock In {\em Proceedings of the 12th international ACM SIGPLAN symposium
+  on Principles and practice of declarative programming}, pages 13--24. ACM,
+  2010.
+
+\bibitem{gulwani2011synthesizing}
+Sumit Gulwani, Vijay~Anand Korthikanti, and Ashish Tiwari.
+\newblock Synthesizing geometry constructions.
+\newblock In {\em ACM SIGPLAN Notices}, volume~46, pages 50--61. ACM, 2011.
+
+\bibitem{huet1978proving}
+G{\'e}rard Huet and Bernard Lang.
+\newblock Proving and applying program transformations expressed with
+  second-order patterns.
+\newblock {\em Acta informatica}, 11(1):31--55, 1978.
+
+\bibitem{kitzelmann2011combined}
+Emanuel Kitzelmann.
+\newblock A combined analytical and search-based approach for the inductive
+  synthesis of functional programs.
+\newblock {\em KI-K{\"u}nstliche Intelligenz}, 25(2):179--182, 2011.
+
+\bibitem{kreitz1998program}
+Christoph Kreitz.
+\newblock Program synthesis.
+\newblock In {\em Automated Deduction—A Basis for Applications}, pages
+  105--134. Springer, 1998.
+
+\bibitem{Manna92fundamentalsof}
+Zohar Manna and Richard Waldinger.
+\newblock Fundamentals of deductive program synthesis.
+\newblock {\em IEEE Transactions on Software Engineering}, 18:674--704, 1992.
+
+\bibitem{pierce2002types}
+Benjamin~C Pierce.
+\newblock {\em Types and programming languages}.
+\newblock MIT press, 2002.
+
+\bibitem{singh2013automated}
+Rishabh Singh, Sumit Gulwani, and Armando Solar-Lezama.
+\newblock Automated feedback generation for introductory programming
+  assignments.
+\newblock In {\em ACM SIGPLAN Notices}, volume~48, pages 15--26. ACM, 2013.
+
+\bibitem{tesson2010program}
+Julien Tesson, Hideki Hashimoto, Zhenjiang Hu, Fr{\'e}d{\'e}ric Loulergue, and
+  Masato Takeichi.
+\newblock Program calculation in coq.
+\newblock In {\em AMAST}, pages 163--179. Springer, 2010.
+
+\bibitem{zettlemoyer2009learning}
+Luke~S Zettlemoyer and Michael Collins.
+\newblock Learning context-dependent mappings from sentences to logical form.
+\newblock In {\em Proceedings of the Joint Conference of the 47th Annual
+  Meeting of the ACL and the 4th International Joint Conference on Natural
+  Language Processing of the AFNLP: Volume 2-Volume 2}, pages 976--984.
+  Association for Computational Linguistics, 2009.
+
+\end{thebibliography}

@@ -1,0 +1,20 @@
+\begin{coqdoccode}
+\coqdocnoindent
+\coqdocvar{length\_corr} =\coqdoceol
+\coqdocindent{1.00em}
+\coqdockw{fun} (\coqdocvar{n} : \coqdocvar{nat}) (\coqdocvar{s} : \coqdocvar{seq} \coqdocvar{n}) \ensuremath{\Rightarrow}\coqdoceol
+\coqdocindent{2.00em}
+\coqdocvar{seq\_ind} (\coqdockw{fun} (\coqdocvar{n0} : \coqdocvar{nat}) (\coqdocvar{s0} : \coqdocvar{seq} \coqdocvar{n0}) \ensuremath{\Rightarrow} \coqdocvar{length} \coqdocvar{n0} \coqdocvar{s0} = \coqdocvar{n0}) \coqdoceol
+\coqdocindent{3.00em}
+(\coqdocvar{refl\_equal} 0)\coqdoceol
+\coqdocindent{3.00em}
+(\coqdockw{fun} (\coqdocvar{n0} \coqdocvar{\_} : \coqdocvar{nat}) (\coqdocvar{s0} : \coqdocvar{seq} \coqdocvar{n0}) (\coqdocvar{IHs} : \coqdocvar{length} \coqdocvar{n0} \coqdocvar{s0} = \coqdocvar{n0}) \ensuremath{\Rightarrow}\coqdoceol
+\coqdocindent{4.00em}
+\coqdocvar{eq\_ind\_r} \coqdoceol
+\coqdocindent{5.00em}
+(\coqdockw{fun} \coqdocvar{n2} : \coqdocvar{nat} \ensuremath{\Rightarrow} \coqdocvar{S} \coqdocvar{n2} = \coqdocvar{S} \coqdocvar{n0}) \coqdoceol
+\coqdocindent{5.00em}
+(\coqdocvar{refl\_equal} (\coqdocvar{S} \coqdocvar{n0})) \coqdocvar{IHs}) \coqdocvar{n} \coqdocvar{s}\coqdoceol
+\coqdocnoindent
+: \coqdockw{\ensuremath{\forall}} (\coqdocvar{n} : \coqdocvar{nat}) (\coqdocvar{s} : \coqdocvar{seq} \coqdocvar{n}), \coqdocvar{length} \coqdocvar{n} \coqdocvar{s} = \coqdocvar{n}.\coqdoceol
+\end{coqdoccode}

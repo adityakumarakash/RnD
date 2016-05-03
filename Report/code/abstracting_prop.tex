@@ -1,0 +1,6 @@
+\begin{coqdoccode}
+\coqdocnoindent
+\coqdockw{Definition} \coqdocvar{divide} (\coqdocvar{x} \coqdocvar{y} : \coqdocvar{N}) := \coqdoctac{\ensuremath{\exists}} \coqdocvar{z}, \coqdocvar{x} \ensuremath{\times} \coqdocvar{z} = \coqdocvar{y}.\coqdoceol
+\coqdocnoindent
+\coqdockw{Definition} \coqdocvar{prime} \coqdocvar{x} := \coqdockw{\ensuremath{\forall}} \coqdocvar{y}, \coqdocvar{divide} \coqdocvar{y} \coqdocvar{x} \ensuremath{\rightarrow} \coqdocvar{y} = 1 \ensuremath{\lor} \coqdocvar{y} = \coqdocvar{x}.\coqdoceol
+\end{coqdoccode}
