@@ -1,0 +1,12 @@
+\chapter{Background}
+\section{Factor Analysis Model and Links to PCA}
+The factor analysis model is a \emph{latent variable model} which related a $d$-dimensional observation vector $y$ to $k$-dimensional vector of latent variable $x$. Following equation expresses the relationship 
+\begin{equation}
+\mathbf{y = Wx + \mu + \epsilon}
+\end{equation}
+where the columns of $\mathbf{W}$, a $d\times k$ matrix, are the factors which relate the two vectors, $\mu$ allows a non-zero mean and $\epsilon$ is the noise/error. \\
+When $k < d$, the latent variables offer a more parisimonious explanation of the dependencies between the observations. \\
+The underlying assumptions of $x \sim \mathcal{N}(0, \mathbf{I})$  and $\epsilon \sim \mathcal{N}(0, \mathbf{ \Psi })$ induces a corresponding Gaussian distribution on observation $\mathbf{y} \sim \mathcal{N}(\mathcal{\mu}, \mathcal{WW^T} + \Psi)$. \\
+The key assumption for the factor analysis model is that, by contraining the error  covariance $\mathbf{\Psi}$ to be diagonal, whose elements $\Psi_i$ are estimated from the data, the observed variables $t_i$ are conditionally independent given the values of latent variables $\mathbf{x}$. Thus the latent variables are intended to capture the correlation between the observed variables while the error term $\epsilon_i$ represents the variability unique to particular $t_i$. \emph{This is where PCA differs from factor analysis, as it treats covariance and variance identically}.\\
+This distinction in variance and covariance in factor analysis model cause the maximum-likelihood estimates of columns of $\mathbf{W}$ to not correspond the the principal subspace of the observed data. However, the two methods are linked if we consider a special case of isptropic error model, where residual variances $\Psi_i = \sigma^2$ are constrained to be equal \cite{Factor}.\\\\
+

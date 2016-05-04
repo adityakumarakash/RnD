@@ -1,0 +1,120 @@
+\documentclass[12pt]{report}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{framed, color}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{mathtools}  
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tabulary}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{natbib}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=blue,
+    urlcolor=black
+}
+
+\newcommand\frontmatter{%
+  \cleardoublepage
+  %\@mainmatterfalse
+  \pagenumbering{roman}}
+
+\newcommand\mainmatter{%
+  \cleardoublepage
+ % \@mainmattertrue
+  \pagenumbering{arabic}}
+
+\newcommand\backmatter{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+ % \@mainmatterfalse
+}
+
+
+
+\title{\textbf{Application of PCA}}
+\author{
+		\bf{RnD Project Report}\\
+        \\
+        \emph{Submitted in partial fulfillment of requirements for the degree of}\\
+        \bf{Bachelor of Technology (Honors)}\\
+        \\
+        \emph{by}\\
+		\bf{Aditya Kumar Akash}\\
+        \bf{Roll No : 120050046}\\
+        \\
+        \emph{under the guidance of}\\
+		\bf{Prof. Suyash Awate}\\
+        \\\\
+        \includegraphics[height=3.5cm]{./iitb_logo.jpg}\\
+        \\
+		\bf{Department of Computer Science and Engineering}\\
+        \bf{Indian Institute of Technology Bombay}\\
+        \bf{Mumbai 400076, India}\\
+}
+\date{April, 2016}
+
+\bibliographystyle{plain}
+
+\begin{document}
+\frontmatter
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\chapter*{\center{Abstract}}
+Principal Component analysis (PCA) is a classical data analysis technique that finds linear transformations of data that retain the maximal amount of variance. The classical version is not based on a probability model. Researchers have proposed a probabilistic model of PCA which is closely related to factor analysis. In this work, we understand the Probabilistic PCA (PPCA) and analyse how it handles missing data situations in which we cannot apply standard PCA. We also try to obtain a comparision in performance of PPCA with a variant of PCA.
+
+\pagebreak
+
+\chapter*{\center{Acknowledgements}}
+I am sincerely indebted to my advisor, Prof. Suyash Awate, IIT Bombay, for his constant support and guidance throughout the course of this project. His experience and insight in the fields of machine learning, image processing and varied aspects of computer science in general, was valuable in boosting my interest on this topic. \\\\
+I finally and especially would like to thank my parents and my whole family for their support and trust in all of my endeavours. The morals they have imparted stayed and would stay close to me always. I also thank my friends for giving a helping hand during hard times.
+\pagebreak
+
+
+\mainmatter
+\input{./chapters/introduction.tex}
+\input{./chapters/background.tex}
+\input{./chapters/ppca.tex}
+\input{./chapters/missingData.tex}
+\input{./chapters/experiments.tex}
+\input{./chapters/results.tex}
+\input{./chapters/conclusion.tex}	
+\newpage
+
+\begin{thebibliography}{1}
+%Dolor
+\bibitem{PPCA} 
+	Tipping, Michael E., and Christopher M. Bishop. "Probabilistic principal component analysis." Journal of the Royal Statistical Society: Series B (Statistical Methodology) 61.3 (1999): 611-622.
+	
+\bibitem{SPCA}
+Roweis, Sam. "EM algorithms for PCA and SPCA." Advances in neural information processing systems (1998): 626-632.
+
+\bibitem{tutorial}
+Chen, Haifeng. "Principal component analysis with missing data and outliers." \url{http://www.cmlab.csie.ntu.edu.tw/~cyy/learning/papers/PCA_Tutorial.pdf} (2002).
+		
+\bibitem{MNIST}
+LeCun, Yann, Corinna Cortes, and Christopher JC Burges. "The MNIST database of handwritten digits." (1998).	
+		
+\bibitem{Factor}		
+Whittle, Peter. "On principal components and least square methods of factor analysis." Scandinavian Actuarial Journal 1952.3-4 (1952): 223-239.	
+
+\bibitem{PCA}
+Hotelling, Harold. "Analysis of a complex of statistical variables into principal components." Journal of educational psychology 24.6 (1933): 417.	
+		
+\end{thebibliography}
+
+
+\end{document}

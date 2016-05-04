@@ -1,0 +1,20 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{2}{section.1.1}
+\contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Factor Analysis Model and Links to PCA}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Probabilistic PCA}{4}{chapter.3}
+\contentsline {section}{\numberline {3.1}The Probability model}{4}{section.3.1}
+\contentsline {section}{\numberline {3.2}EM method for PPCA}{5}{section.3.2}
+\contentsline {section}{\numberline {3.3}Properties of MLEs}{6}{section.3.3}
+\contentsline {chapter}{\numberline {4}Missing Data}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}PPCA with Missing Data}{7}{section.4.1}
+\contentsline {section}{\numberline {4.2}PCA with Missing Data}{8}{section.4.2}
+\contentsline {chapter}{\numberline {5}Experiments}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}Dataset}{9}{section.5.1}
+\contentsline {section}{\numberline {5.2}Experiment Design}{9}{section.5.2}
+\contentsline {chapter}{\numberline {6}Results and Observations}{11}{chapter.6}
+\contentsline {section}{\numberline {6.1}Tobamovirus Data}{11}{section.6.1}
+\contentsline {section}{\numberline {6.2}MNIST Data}{15}{section.6.2}
+\contentsline {section}{\numberline {6.3}USPS Dataset}{16}{section.6.3}
+\contentsline {section}{\numberline {6.4}Binary AlphaDigits Dataset}{18}{section.6.4}
+\contentsline {chapter}{\numberline {7}Conclusion}{19}{chapter.7}

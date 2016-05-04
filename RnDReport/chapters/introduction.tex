@@ -1,0 +1,27 @@
+\chapter{Introduction}
+
+Principal Component analysis (PCA) is a ubiquitous tool for dimensionality reduction.  It has many applications data compression, visualization, image processing, exploratory data analysis, pattern recognition and time series prediction. \\
+There are a number of optimization criteria to derive PCA. The most important of these is in terms of stardardized linear projection which maximizes the variance in the projected space \cite{PCA}. Assume that $\{y_i\}, i \in \{1, 2, ..., n\}$ is a set of $d$ dimensional data vectors. Then the $k$ principal axes $\{w_j\}, j \in \{1, 2, ..., k\}$ are those orthogonal axes onto which the retained variance under projection is maximal. It can be shown that $w_j$ are given by $k$ dominant eigen vectors (those with largest eigen values, $\lambda_j$) of the sample covariance matrix  
+\begin{center}
+\begin{equation}
+	\mathbf{S = \sum_{i=1}^n (y_i - \bar{y})(y_i - \bar{y})^T}
+\end{equation}
+\end{center}
+where $\mathbf{\bar{y}}$ is the sample mean, such that
+\begin{equation}
+\mathbf{Sw_j=\lambda_jw_j}
+\end{equation}
+The $k$ principal components of the observed vector $\mathbf{y_i}$ are given by the vector 
+\begin{equation}
+\mathbf{x_i=W^T(y_i - \bar{y})}
+\end{equation}
+where $\mathbf{W = (w_1;w_2;...;w_k)}$. The variables $\mathbf{x_i}$ are uncorrelated such that the covariance matrix $\sum_{i=1}^n\frac{\mathbf{x_ix_i^T}}{n}$ is diagonal with elements $lambda_i$.\\
+A complementary property of PCA is that of all the orthogonal linear projections, the principal component minimizes the squared reconstruction error. However, PCA does not provide a probabilistic model of data. This gives motivation for PPCA.
+
+\section{Motivation}
+A probabilistic formulation of PCA from a Gaussian latent variable model is obtained. This is closely related to factor analysis. PCA could be viewed a limiting case of such a Gaussian model. In such a formulation, the principal axes emerge as maximum likelihood parameter estimates. Such a probabilistic formulation is intuitively applealing, as the definition of a likelihood measure enables comparison with other probabilistic techniques, while facilitating statistical testing and permitting the application of Bayesian methods. Further motivation behind a probabilistic PCA is that it conveys additional practical advantage as :
+\begin{itemize}
+\item The probability model offers the potential to extend the scope of conventional PCA, such as using probabilistic mixtures and PCA projections in missing data case.
+\item PPCA can be utilized as a general Gaussian density model. This allows the maximum likelihood estimates for the parameters associated with the covariance matrix to be efficiently computed from the data principal components.
+\end{itemize}
+

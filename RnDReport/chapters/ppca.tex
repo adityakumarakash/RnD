@@ -1,0 +1,76 @@
+\chapter{Probabilistic PCA}
+\section{The Probability model}
+The model bears similarity to the factor analysis model, 
+\begin{equation}
+\mathbf{y = Wx + \mu + \epsilon}
+\end{equation}
+with the assumption of isotropic gaussian noise model $\mathcal{N}(0, \sigma^2\mathbf{I})$. This gives as $x$-conditional distribution over $y$-space as
+\begin{equation}
+\mathbf{t|x \sim \mathcal{N}(Wx + \mu, \sigma^2I)}
+\end{equation}
+With $x \sim \mathcal{N}(0, \mathbf{I})$, the marginal distribution for $y$ is given by 
+\begin{equation}
+\mathbf{t \sim \mathcal{N}(\mu, C)}
+\end{equation}
+where oberservation covariance model is specified by $\mathbf{C = WW^T + \sigma^2I}$. \\
+The log-likelihood is then 
+\begin{equation}
+\mathcal{L} = -\frac{N}{2}{d \text{ln}(2\pi) + \text{ln}|\mathbf{C}| + \text{tr}(\mathbf{C^{-1}S})}
+\end{equation}
+where 
+\begin{equation}
+	\mathbf{S} = \frac{1}{N}\sum_{i=1}^N\mathbf{(y_i - \mu)(y_i - \mu)^T}
+\end{equation}
+The maximum-likelihood estimates for $\mu$ is given by the mean of the data, in which ase $\mathbf{S}$ is the sample covariance. Estimates of $\mathbf{W}$ and $\sigma^2$ is obtained by $EM$ algorithm.
+\pagebreak
+\section{EM method for PPCA}
+In the $EM$ approach to maximize likelihood for PPCA, we consider latent variables $\mathbf{x_i}$ to be 'missing' data and the 'complete' data to comprise the observations together with latent variables. Corresponding complete log-likelihood is then :
+\begin{equation} \label{eq1}
+\mathcal{L_C} = \sum_{i=1}^N\text{ln}\{p(\mathbf{y_i, x_i})\}
+\end{equation},
+where, in PPCA, we get
+\begin{equation}
+p(\mathbf{y_i, x_i}) = (2\pi \sigma^2)^{-d/2}\text{exp}\big\{-\frac{||\mathbf{y_i - Wx_i - \mu}||}{2\sigma^2}\big\}(2\pi)^{-k/2}\text{exp}\big\{-\frac{||\mathbf{x_i}||}{2}\big\}
+\end{equation}
+The posterior is given by 
+\begin{equation}
+\mathbf{x|y} \sim \mathcal{N}(\mathbf{M^{-1}W^T(y-\mu), \sigma^2M{-1}})
+\end{equation}
+where $\mathbf{M} = W^TW + \sigma^2I$.
+From the appendix B of \cite{PPCA} we obtain following \\\\
+\textbf{E-Step} : 
+\begin{equation}
+\mathbf{\langle x_i\rangle = M^{-1}W^T(y_i - \mu)}
+\end{equation}
+\begin{equation}
+\mathbf{\langle x_ix_i^T\rangle = \sigma^2M^{-1} + \langle x_i\rangle \langle x_i\rangle^T}
+\end{equation}
+\textbf{M-Step} :
+\begin{equation}
+\mathbf{\tilde{W} = \big[ \sum_i(y_i-\mu)\langle x_i\rangle \big]\big[\sum_i\langle x_ix_i^T\rangle \big]^{-1}}
+\end{equation}
+\begin{equation}
+\mathbf{\sigma^2 = \frac{1}{Nd}\sum_i\big\{ ||y_i-\mu||^2 - 2\langle x_i\rangle^T\tilde{W}^T(y_i-\mu) + \text{tr}(\langle x_ix_i^T\rangle\tilde{W}^T\tilde{W}) \big\}}
+\end{equation}
+
+The paper \cite{PPCA} shows the combination of both of the above steps rewritten as 
+\begin{equation}
+\mathbf{\tilde{W} = SW(\sigma^2I + M^{-1}W^TSW)^{-1}}
+\end{equation}
+\begin{equation}
+\mathbf{\sigma^2 = \text{tr}(S-SWM^{-1}\tilde{W}^T)}
+\end{equation}
+$\mathbf{S}$ is the sample covariance.\\
+Analysis of thes equations show that in normal PCA calculation we require calculation of $\mathbf{S}$ which takes $\mathcal{O(N}d^2)$ operations. But in case of above EM formulation, we only need to compute $\mathbf{SW}$ as $\mathbf{\sum_i x_i(x_i^TW)}$ which takes $\mathcal{O(N}dk)$ operations. Thus when $k\ll d$, considerable computational savings would be obtained. This is one of the benefits of using the EM version of PPCA.
+
+\section{Properties of MLEs}
+In paper \cite{PPCA} it is shown that with $\mathbf{C = WW^T + \sigma^2I}$, likelihood \ref{eq1} is maximized when 
+\begin{equation}
+\mathbf{W_{ML} = U_k(\Lambda_k - \sigma^2I)^{1/2}R}
+\end{equation}
+where $k$ column vectors in $\mathbf{U_k}$ are the principal eigenvectors of $\mathbf{S}$, with corresponding eigenvalues in $\Lambda_k$, and $\mathbf{R}$ is arbitary orthogonal rotation matrix. \\
+When $\mathbf{W = W_{ML}}$, MLE for $\sigma^2$ is
+\begin{equation}
+\sigma^2_{ML} = \frac{1}{d - k}\sum_{j=k+1}^d\lambda_j
+\end{equation}
+which has \textbf{interpretation of variance lost in projection, averaged over the lost dimension}. Using this we can see how this lost variance is subtracted from the eigen vectors in the estimation of $\mathbf{W_{ML}}$.

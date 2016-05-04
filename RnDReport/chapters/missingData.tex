@@ -1,0 +1,18 @@
+\chapter{Missing Data}
+\section{PPCA with Missing Data}
+One of the motivation of using PPCA is that it provides interpretation to the data that is missing from the observation variable. Such \emph{missing data variables are assumed to be 'parameters' in the model} and a generic EM algorithm is designed to handle the case.\\
+An example of missing data case would be in computer vision field, when we model a dodecahedran from a sequence of segmented images. One sample of data would contain only information (in form of normals) for only 6 of the faces, while rest is missing data.\\\\
+In these cases the \textbf{E-step} of EM algorithm is generalized to following :\\
+\textbf{Generalized E-step} \citep{SPCA} 
+\begin{itemize}
+\item If $\mathbf{y}$ is incomplete, then we find a unique pair of points $\mathbf{x^*, y^*}$ (such that $\mathbf{x^*}$ lies in the current principal subspace and $\mathbf{y^*}$ lies in the subspace defined by the known information about $\mathbf{y}$) which minimize the norm $||\mathbf{Wx^*-y^*+\mu}||^2$. Now we set the corresponding expectation of $\mathbf{x}$ to $\mathbf{x^*}$ and correspoinding observed variable $\mathbf{y}$ to $\mathbf{y^*}$. The solution is obtained by finding solution to a particular constrained matrix.
+\item If $\mathbf{y}$ is complete, then $\langle \mathbf{x} \rangle$ is found as before.
+\end{itemize}
+The above steps emerge as a result of treating the missing values as parameters to the model. The optimization problem results from maximizing the likelihood of the complete data. 
+\pagebreak
+\section{PCA with Missing Data}
+In this work we also try to compare following PCA modification for missing data. 
+\begin{itemize}
+\item \textbf{PCA with reference to Factor analysis} : In this approach we try to estimate the missing values using the minimization of $||\mathbf{Wx^*-y^*+\mu}||^2$. $\mathbf{x}$ is the latent variable. In each iteration, first $\mathbf{y}$ is estimated using this minimization, then $\mathbf{W}$ is estimated by finding $k$ principal component of covariance of $\mathbf{Y}$. The optimization problem emerges as a result of assuming the data generation model for $\mathbf{y}$ based on the factor model.
+\item \textbf{Standard PCA with missing values filled by mean} : This case is based on direct estimation of missing values by assuming Gassian model for the data. We assume observation having mean $\mu$ and covariance $\mathbf{S}$. If there was no missing value, the estimation of mean and covariance would be sample mean and covariance. Now with missing data being there, we first estimate mean to be sample mean of data which is present. The missing data then obtained by taking derivative comes out to be the components from mean. Thus in the next step, taking the mean over entire data does not change it. \emph{Effectively in this method we replace the missing data with the mean of the non-missing data}.
+\end{itemize}

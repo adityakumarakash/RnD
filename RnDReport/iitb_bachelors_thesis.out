@@ -1,0 +1,20 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 2
+\BOOKMARK [0][-]{chapter.2}{Background}{}% 3
+\BOOKMARK [1][-]{section.2.1}{Factor Analysis Model and Links to PCA}{chapter.2}% 4
+\BOOKMARK [0][-]{chapter.3}{Probabilistic PCA}{}% 5
+\BOOKMARK [1][-]{section.3.1}{The Probability model}{chapter.3}% 6
+\BOOKMARK [1][-]{section.3.2}{EM method for PPCA}{chapter.3}% 7
+\BOOKMARK [1][-]{section.3.3}{Properties of MLEs}{chapter.3}% 8
+\BOOKMARK [0][-]{chapter.4}{Missing Data}{}% 9
+\BOOKMARK [1][-]{section.4.1}{PPCA with Missing Data}{chapter.4}% 10
+\BOOKMARK [1][-]{section.4.2}{PCA with Missing Data}{chapter.4}% 11
+\BOOKMARK [0][-]{chapter.5}{Experiments}{}% 12
+\BOOKMARK [1][-]{section.5.1}{Dataset}{chapter.5}% 13
+\BOOKMARK [1][-]{section.5.2}{Experiment Design}{chapter.5}% 14
+\BOOKMARK [0][-]{chapter.6}{Results and Observations}{}% 15
+\BOOKMARK [1][-]{section.6.1}{Tobamovirus Data}{chapter.6}% 16
+\BOOKMARK [1][-]{section.6.2}{MNIST Data}{chapter.6}% 17
+\BOOKMARK [1][-]{section.6.3}{USPS Dataset}{chapter.6}% 18
+\BOOKMARK [1][-]{section.6.4}{Binary AlphaDigits Dataset}{chapter.6}% 19
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 20
