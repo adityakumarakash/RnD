@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.3)  4 MAY 2016 13:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.3)  4 MAY 2016 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**iitb_bachelors_thesis.tex
-(./iitb_bachelors_thesis.tex
+**RndReport.tex
+(./RndReport.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 4 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -371,9 +371,8 @@ LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count124
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 22.
-
-(./iitb_bachelors_thesis.aux)
-\openout1 = `iitb_bachelors_thesis.aux'.
+ (./RndReport.aux)
+\openout1 = `RndReport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
 LaTeX Font Info:    ... okay on input line 69.
@@ -467,9 +466,9 @@ LaTeX Info: Redefining \ref on input line 69.
 LaTeX Info: Redefining \pageref on input line 69.
 LaTeX Info: Redefining \nameref on input line 69.
 
-(./iitb_bachelors_thesis.out) (./iitb_bachelors_thesis.out)
+(./RndReport.out) (./RndReport.out)
 \@outlinefile=\write3
-\openout3 = `iitb_bachelors_thesis.out'.
+\openout3 = `RndReport.out'.
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 72.
 
@@ -491,9 +490,9 @@ Package pdftex.def Info: ./iitb_logo.jpg used on input line 72.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./iitb_logo.jpg>]
-(./iitb_bachelors_thesis.toc)
+(./RndReport.toc)
 \tf@toc=\write4
-\openout4 = `iitb_bachelors_thesis.toc'.
+\openout4 = `RndReport.toc'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
@@ -790,21 +789,21 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
- (./iitb_bachelors_thesis.aux)
+ (./RndReport.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
-Package rerunfilecheck Info: File `iitb_bachelors_thesis.out' has not changed.
+Package rerunfilecheck Info: File `RndReport.out' has not changed.
 (rerunfilecheck)             Checksum: FBD8D56BF07068CEB3BB68E82134D58F;1186.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
  ) 
 Here is how much of TeX's memory you used:
  7917 strings out of 494985
- 113749 string characters out of 6180357
+ 113569 string characters out of 6180357
  215926 words of memory out of 5000000
  10900 multiletter control sequences out of 15000+600000
  14800 words of font info for 56 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 33i,11n,43p,794b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,11n,43p,782b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texliv
@@ -817,7 +816,7 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pf
 b>
-Output written on iitb_bachelors_thesis.pdf (24 pages, 833312 bytes).
+Output written on RndReport.pdf (24 pages, 833312 bytes).
 PDF statistics:
  354 PDF objects out of 1000 (max. 8388607)
  303 compressed objects within 4 object streams
